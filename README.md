@@ -86,6 +86,7 @@ DB	PostgreSQL
 		서브에이전트: PolicyCrawler, CorporateESGSummarizer, RiskScorer(가능 하다면)
 		
 Architecture
-<img width="1001" height="239" alt="image" src="https://github.com/user-attachments/assets/97201c32-e3fc-43f3-acbb-1ad894bce662" />
+<img width="2505" height="1640" alt="Mermaid Chart - Create complex, visual diagrams with text -2025-10-21-083600" src="https://github.com/user-attachments/assets/20c05d80-e84b-47f0-8876-abc42c558a4a" />
+
 
 
