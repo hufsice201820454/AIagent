@@ -38,7 +38,7 @@ Objective: EV 관련 시장(OEM, 배터리, 공조) 분석
 	Stock Agent: stock_analysis, create_stock_chart
 	ESG Agent: GovESGSearch, CorpESGSearch, (보조로 tavily_tool)
 	
-##State
+## State
 
 1) Global State
 	pg_conn: PostgreSQL 연결
@@ -64,7 +64,7 @@ Objective: EV 관련 시장(OEM, 배터리, 공조) 분석
 (선택) esg_risk_score 등 정규화된 지표
 
 
-Tech Stack
+## Tech Stack
 Category	Details
 Framework	LangGraph, LangChain, Python
 LLM	GPT-4o-mini via OpenAI API
@@ -72,7 +72,7 @@ Retrieval	Chroma
 Embedding	OpenAI, multilingual-e5-large
 DB	PostgreSQL
 
-##Agents
+## Agents
 	#Supervisor Agent
 		역할: 하위 에이전트 실행 순서 조정 및 최종 보고서 통합
 		서브에이전트: Vaule Agent, Stock Agent, ESG Agent
