@@ -86,12 +86,6 @@ DB	PostgreSQL
 		서브에이전트: PolicyCrawler, CorporateESGSummarizer, RiskScorer(가능 하다면)
 		
 Architecture
-User → Supervisor → (Value Chain / Stock / ESG) → 결과 병합 → EV Trend Report
-각 메인 에이전트 내부에서 1~3개의 서브에이전트를 선택적으로 호출해 단계별 처리
-Directory Structure
-├── data/ # PDF 문서
-├── agents/ # Agent 모듈
-├── prompts/ # 프롬프트 템플릿
-├── outputs/ # 평가 결과 저장
-├── app.py # 실행 스크립트
-└── README.md
+<img width="1001" height="239" alt="image" src="https://github.com/user-attachments/assets/97201c32-e3fc-43f3-acbb-1ad894bce662" />
+
+
