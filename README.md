@@ -18,38 +18,45 @@ Objective: EV 관련 시장(OEM, 배터리, 공조) 분석
 ## Method: AI Agent + Advanced RAG
 
 ## Tools
-# 공통/검색
+1. 공통/검색
 	tavily_tool: 최신 정보/문헌 검색(Research 보조)
+
 	
-# 주가/시각화
+2. 주가/시각화
 	stock_analysis: 주식 핵심 지표 요약 분석 문자열 반환 (Stock Agent)
 	create_stock_chart: 티커 기반 PNG 차트 생성 + 통계 요약 반환 (Stock Agent)
 	visualization_tool: 밸류체인 클러스터 지도/산출물 시각화 (Value Chain Agent)
+
 	
-# ESG/정책
+3. ESG/정책
 	GovESGSearch: 각국 ESG·탄소 규제 검색 (ESG Agent)
 	CorpESGSearch: 기업 도메인 기반 ESG 정책/보고서 검색 (ESG Agent)
 
-# 각 Tool의 주 사용 에이전트
+
+4. 각 Tool의 주 사용 에이전트
 	Value Chain Agent: visualization_tool, (보조로 tavily_tool)
 	Stock Agent: stock_analysis, create_stock_chart
 	ESG Agent: GovESGSearch, CorpESGSearch, (보조로 tavily_tool)
 	
 ##State
+
 1) Global State
 	pg_conn: PostgreSQL 연결
 	data_path: 산출물 파일 경로 (str)
 	messages: 노드(에이전트)별 응답 누적
 	final_report: 최종 리포트 파일명 또는 경로
+
 	
 2) Value Chain Agent State
 	table(Data): PostgreSQL에서 가져온 공장/설비 데이터프레임 (DataFrame)
 	list_result: 클러스터링/요약 결과 (List[Dict[str, float]] 등)
 	cluster_map_image: 클러스터 시각화 이미지 경로 (str)
 
+
 3) Stock Agent State
 	stock_chart_image: 생성된 주가 차트 이미지 경로 (str)
 	(선택) price_df, metrics_json 등 내부 분석 산출물
+
 
 4) ESG Agent State
 	gov_esg_findings: 국가/지역 ESG 정책 검색 결과 요약
