@@ -45,7 +45,21 @@ Objective: EV 관련 시장(OEM, 배터리, 공조) 분석
 	CorpESGSearch: 기업 도메인 기반 ESG 정책/보고서 검색 (ESG Agent)
 
 
-4. 각 Tool의 주 사용 에이전트
+4. 기술 요약
+	TechSearchAgent – Tools
+	SearchTool — 웹 검색 API 호출(뉴스/웹/학술/도메인 필터, 날짜 범위)
+	Fetcher — URL 가져오기(HTML/PDF/CSV), 리다이렉트/헤더 처리	
+	Parser — 본문/표/메타데이터 추출(HTML, PDF 텍스트화), 언어 감지
+	Deduper — 유사도/URL 해시 기반 중복 제거
+	Ranker — 최신성·권위도·일치도 가중 랭킹(예: 날짜↑, .gov/.edu/.org 가중)
+	Summarizer — 문서 요약·핵심 문장/수치 뽑기(문장별 근거 연결)
+	CitationBuilder — 문장별 근거 URL/발행일 매핑, 인용 리스트 생성
+	Normalizer — 수치/단위/날짜 표준화(예: kWh↔MWh, 2025-10-22 ISO)
+	CacheStore — 질의↔결과 캐시 저장/조회
+	RateLimiter — 호출 빈도 제어(벤더 API 쿼터 보호)
+
+
+6. 각 Tool의 주 사용 에이전트
 	Value Chain Agent: visualization_tool, (보조로 tavily_tool)
 	Stock Agent: stock_analysis, create_stock_chart
 	ESG Agent: GovESGSearch, CorpESGSearch, (보조로 tavily_tool)
@@ -73,7 +87,18 @@ Objective: EV 관련 시장(OEM, 배터리, 공조) 분석
 4) ESG Agent State
 	gov_esg_findings: 국가/지역 ESG 정책 검색 결과 요약
 	corp_esg_findings: 기업 ESG 정책/보고서 요약
-(선택) esg_risk_score 등 정규화된 지표
+
+
+5) TechSearch Agent State
+   query: str — 사용자가 던진 검색 질의(예: “EV 배터리 팩 공급거점 2024 생산량”)
+   constraints: dict — 필터(언어, 국가/도메인, 날짜 범위, 파일형식 포함/제외)
+   entities: list[str] — 회사/제품/지역 키워드 토큰화 결과
+   results: list[dict] — 1차 검색 결과(타이틀, URL, 스니펫, 날짜, 출처 도메인)
+   docs: list[dict] — 본문 추출/요약된 문서 블록(본문텍스트, 핵심문장, 추출표/수치)
+   citations: list[dict] — 인용 메타(문장 ↔ URL, 발행일, 접근일)
+   dedup_index: set — URL/문서 해시로 중복 제거용
+   cache: dict — 동일/유사 질의 캐시(결과 재사용)
+   output_json: dict — 최종 반환(JSON): { “summary”, “key_facts[]”, “links[]”, “citations[]” }
 
 
 ## Tech Stack
@@ -87,7 +112,7 @@ DB	        PostgreSQL
 ## Agents
 	#Supervisor Agent
 		역할: 하위 에이전트 실행 순서 조정 및 최종 보고서 통합
-		서브에이전트: Vaule Agent, Stock Agent, ESG Agent
+		서브에이전트: Vaule Agent, Stock Agent, ESG Agent, TechSearch Agent
 	#Value Chain Agent
 		입력: 공장/설비 데이터, 참조 문헌(선택)
 		도구: visualization_tool, tavily_tool(보조)
@@ -103,6 +128,35 @@ DB	        PostgreSQL
 		도구: GovESGSearch, CorpESGSearch, tavily_tool(보조)
 		출력: gov_esg_findings, corp_esg_findings, 위험·정책 요약 (각 기업이 설정한 ESG 목표 연도를 설정 예정(완성차 회사 한정))
 		서브에이전트: PolicyCrawler, CorporateESGSummarizer, RiskScorer(가능 하다면)
+	#TechSearchAgent
+		echQueryAgent: 기업명·도메인·제품 정보를 기반으로 EV 핵심 기술 키워드를 자동 생성. 완성차 vs 협력사에 따라 다른 키워드 세트 생성.
+		입력: company_name, company_type (OEM / supplier)
+		출력: query_terms
+		{
+  			"Hyundai": ["solid-state battery", "800V", "SiC inverter", "heat pump"],
+  			"Hanon Systems": ["thermal management", "heat exchanger", "compressor efficiency"]
+		}
+
+		TechSearchAgentCore
+		역할:tavily_tool을 사용해 최신 기술 관련 문헌/기사/특허 검색. 검색 결과를 신뢰도 기반으로 정렬 및 중복 제거. 최종적으로 기업별 주요 기술 근거 문서 목록 도출.
+		입력: query_terms
+		출력: tech_hits
+		{
+  			"Hyundai": [
+     			{"title": "Hyundai 800V Platform Expansion", "url": "...", "source": "HyundaiNews", "date": "2024-08"},
+     			{"title": "SiC Powertrain Integration", "url": "...", "source": "TechCrunch", "date": "2023-11"}
+  			]
+		}
+
+		TechSummarizerAgent
+		역할: 각 기업별 검색 결과를 요약 및 정제. 완성차 10–20문장 / 협력사 5–10문장 기준 유지. 문장당 근거 링크 [1], [2] 표기. 과장/광고 문장 제거 및 신뢰도 스코어 계산.
+		입력: tech_hits
+		출력: tech_summary, confidence_score
+		{
+  			"Hyundai": {
+     			"summary": ["현대는 800V 초고속 충전 플랫폼을 도입하여...", "SiC 인버터 채택으로 효율을 3% 향상시켰다."],
+     			"confidence": 0.86
+  		}
 
 ## 데이터 셋
 	# 공장 위치(주소) 데이터
@@ -121,6 +175,7 @@ DB	        PostgreSQL
 
 2. Stock_analyzer Agent -> 찾을 예정 
 3. ESG Agent -> 찾을 예정
+4. TechSearch Agent
 
 ## 산출 보고서 양식
 	1. 전반적 요약
@@ -157,6 +212,9 @@ DB	        PostgreSQL
 
 
 ├────── EsgAgent.py
+
+
+├────── TechSearchAgent.py
 
 
 ├── prompts/               # 프롬프트 템플릿
