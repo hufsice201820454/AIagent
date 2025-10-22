@@ -123,20 +123,50 @@ DB	        PostgreSQL
 			2. Stock Analyzer Agent -> 주가를 분석할 예정
 
 ## 디렉토리 구조
+
+
 ├── data/                  # PDF 문서
+
+
 ├────── csv 파일 3개
+
+
 ├── agents/                # Agent 모듈
+
+
 ├────── SupervisorAgent.py
+
+
 ├────── ValuechainAgent.py
+
+
 ├────── StockAnalyzerAgent.py
+
+
 ├────── EsgAgent.py
+
+
 ├── prompts/               # 프롬프트 템플릿
+
+
 ├────── Prompt.py
+
+
 ├── outputs/			   # 결과 값 산출
+
+
 ├── db/
+
+
 ├────── Postgre.py
+
+
 ├── app.py                 # 실행 스크립트
+
+
 ├── README.md
+
+
 └── .env
 		
 Architecture
