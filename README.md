@@ -2,17 +2,30 @@
 
 본 프로젝트는 전기차(EV) 시장 분석을 하는 에이전트를 설계하고 구현한 실습 프로젝트입니다.
 
+# change 1
+	크게 현재와 미래를 토대로 전반적인 전기차 시장 분석과 각 완성차 기업이 전기차 시장에서 어떻게 사업을 전개하고 있는지 주식리포트를 생성하려 합니다.
+
+	1) 현재 -> 전기 자동차 공장의 위치를 기반 그 주변의 협력사 공장의 수를 count 하여 점수화 하려합니다. -> 도메인적 지식으로 66km, 140km 를 평가기준으로 설정합니다.
+	2) 미래 -> ESG 정책을 국가 별로 검색하고 / 각 기업의 목표를 (url)을 입력하여 Agent가 기업별 ESG 목표/년도를 찾게 할 생각입니다.
+	3) 기업의 차별화된 전기차 기술을 검색하려 합니다 / 완성차의 경우 10 ~ 20문장 / 협력사의 경우 5 ~ 10 문장/ 으로 요약할 생각입니다.
+	4) 주식 리포트와 1,2,3의 결과를 병합하여 보고서를 출력하려 합니다. 
+
 ## Core Agents (3)
 	Value Chain Agent: 공장 입지/가동 현황 데이터 분석 및 지리적 클러스터링
-	Stock Agent: 완성차·배터리·공조 관련 상장사 주가 흐름/지표 분석 및 차트 생성
+	TechSearch Agent: 완성차·배터리·공조 회사에서의 전기차 관련 차별화된 기술을 정리합니다 / 완성차 10 ~ 20 / 협력사 5 ~ 10
 	ESG Agent: 각국 ESG/탄소 규제와 기업 ESG 정책·리스크 요약
+	Stock Agent: 완성차·배터리·공조 관련 상장사 주가 흐름/지표 분석 및 차트 생성
 	Supervisor Agent: 3개 결과를 통합하여 최종 보고서 작성
-	
+
+<img width="701" height="475" alt="image" src="https://github.com/user-attachments/assets/2e353a14-72b0-4ad6-92fb-4d31bc057be9" />
+<img width="713" height="315" alt="image" src="https://github.com/user-attachments/assets/87b0efb2-6024-4543-a99c-d7ab5ff912b6" />
+<img width="842" height="535" alt="image" src="https://github.com/user-attachments/assets/d95fa9cb-19cd-4610-a81f-1a86ad122d0d" />
+
 ## Overview
 Objective: EV 관련 시장(OEM, 배터리, 공조) 분석
 대상: 기업 분석, 주가 분석, 완성차 주변 공장 수/가동 현황 분석
 목적: EV 시장의 생산(현상), 시장 반응(주가/재무), 규제/ESG(정책) 축을 통합 분석·시각화하여 투자 인사이트와 트렌드 리포트를 자동 생성한다.
-최종 산출물: EV Trend Report (클러스터 지도 + 주가 차트 + ESG 요약 포함)
+최종 산출물: EV Trend Report (지도 + 주가 차트 + ESG 요약 포함)
 
 ## Method: AI Agent + Advanced RAG
 
