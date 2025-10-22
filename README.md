@@ -1,6 +1,5 @@
 # AIagent
 
-{TITLE}
 본 프로젝트는 전기차(EV) 시장 분석을 하는 에이전트를 설계하고 구현한 실습 프로젝트입니다.
 
 ## Core Agents (3)
@@ -67,10 +66,10 @@ Objective: EV 관련 시장(OEM, 배터리, 공조) 분석
 ## Tech Stack
 Category	Details
 Framework	LangGraph, LangChain, Python
-LLM	GPT-4o-mini via OpenAI API
+LLM	        GPT-4o-mini via OpenAI API
 Retrieval	Chroma
 Embedding	OpenAI, multilingual-e5-large
-DB	PostgreSQL
+DB	        PostgreSQL
 
 ## Agents
 	#Supervisor Agent
@@ -80,7 +79,7 @@ DB	PostgreSQL
 		입력: 공장/설비 데이터, 참조 문헌(선택)
 		도구: visualization_tool, tavily_tool(보조)
 		출력: cluster_map_image, list_result
-		서브에이전트: DBAgent(CSV 적재 및 데이터 로드), MapVisualizer (클러스터링)
+		서브에이전트: DBAgent(CSV 적재 및 데이터 로드), MapVisualizer(거리 좌표)
 	#Stock Agent
 		입력: 대상 회사/티커 목록
 		도구: stock_analysis, create_stock_chart
@@ -89,8 +88,56 @@ DB	PostgreSQL
 	#ESG Agent
 		입력: 국가/기업 식별자(도메인/이름)
 		도구: GovESGSearch, CorpESGSearch, tavily_tool(보조)
-		출력: gov_esg_findings, corp_esg_findings, 위험·정책 요약
+		출력: gov_esg_findings, corp_esg_findings, 위험·정책 요약 (각 기업이 설정한 ESG 목표 연도를 설정 예정(완성차 회사 한정))
 		서브에이전트: PolicyCrawler, CorporateESGSummarizer, RiskScorer(가능 하다면)
+
+## 데이터 셋
+	# 공장 위치(주소) 데이터
+	# 완성차 위치
+	# 공조 공장 위치
+	# 배터리 공장 위치
+
+## 평가지표
+
+1. ValueChain Agent
+정리
+구분	        평균 거리 (km)	    출처
+일본 자동차 산업	66 km (≈ 41 mile)	Smitka (1991), MIT Sloan Working Paper “Competitive Ties: Subcontracting in the Japanese Automotive Industry”
+미국 자동차 산업	140 km (≈ 87 mile)	동 논문 / 미국 OEM 비교 데이터 인용
+글로벌 설계 상한	≤ 1 000 km	        Boston Consulting Group (2015), Balancing Auto Suppliers’ Manufacturing Networks
+
+2. Stock_analyzer Agent -> 찾을 예정 
+3. ESG Agent -> 찾을 예정
+
+## 산출 보고서 양식
+	1. 전반적 요약
+	2. 전기차 시장 전체적 트렌드 요약
+		1. Agent 별 결과 종합하여 확인 -> 전기차 시장의 현재를 확인
+		2. ESG 정책을 토대로 전기차 시장의 미래가 어떻게 될지 확인
+	3. 각 완성차 기업 분석 결과
+		#완성차 회사
+		1. Value Chain Agent -> 현재 기업 주위로 묶어져 있는 협력사 숫자 확인
+		2. Stock Analyzer Agent -> 현재 그 기업의 주가를 분석 예정
+		3. ESG Agent -> 각 기업이 설정한 ESG 목표 연도를 설정 예정(완성차 회사 한정)
+			#완성차 회사 별 협력사 상황
+			2. Stock Analyzer Agent -> 주가를 분석할 예정
+
+## 디렉토리 구조
+├── data/                  # PDF 문서
+├────── csv 파일 3개
+├── agents/                # Agent 모듈
+├────── SupervisorAgent.py
+├────── ValuechainAgent.py
+├────── StockAnalyzerAgent.py
+├────── EsgAgent.py
+├── prompts/               # 프롬프트 템플릿
+├────── Prompt.py
+├── outputs/			   # 결과 값 산출
+├── db/
+├────── Postgre.py
+├── app.py                 # 실행 스크립트
+├── README.md
+└── .env
 		
 Architecture
 <img width="2505" height="1640" alt="Mermaid Chart - Create complex, visual diagrams with text -2025-10-21-083600" src="https://github.com/user-attachments/assets/20c05d80-e84b-47f0-8876-abc42c558a4a" />
