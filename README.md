@@ -30,84 +30,121 @@ Objective: EV 관련 시장(OEM, 배터리, 공조) 분석
 ## Method: AI Agent + Advanced RAG
 
 ## Tools
-1. 공통/검색
-	tavily_tool: 최신 정보/문헌 검색(Research 보조)
+TechSearchAgent 툴
 
-	
-2. 주가/시각화
-	stock_analysis: 주식 핵심 지표 요약 분석 문자열 반환 (Stock Agent)
-	create_stock_chart: 티커 기반 PNG 차트 생성 + 통계 요약 반환 (Stock Agent)
-	visualization_tool: 밸류체인 클러스터 지도/산출물 시각화 (Value Chain Agent)
+	TechDomainResolver
+		입력: { "company": str }
+		출력: { "company": str, "domain": str | null }
+		목적: OEM 회사 도메인 해석(화이트리스트 우선, 없으면 검색 추정)
+	TechQueryBuilder
+		입력: { "company": str, "company_type": "OEM" }
+		출력: { "company": str, "query_terms": str[] }
+		목적: 기술 키워드 쿼리 텀 생성
+	TechSearch
+		입력: { "company": str, "domain": str | null, "query_terms": str[] }
+		출력: { "hits": [{ "title": str, "url": str, "content": str }] , "answer": str }
+		목적: Tavily 검색(도메인 가중), 1차 문서 수집
+	TechDeduperRanker
+		입력: { "hits": Hit[], "domain": str | null }
+		출력: { "hits": Hit[] } // 최대 12개로 정리
+		목적: URL 중복 제거 + 도메인/콘텐츠 기반 랭킹
+	TechSummarizer
+		입력: { "company": str, "answer": str | null, "hits": Hit[] }
+		출력: { "bullets": str[], "citations": [{ "title": str, "url": str, "content": str }] }
+		목적: 경량 추출 요약(키워드 큐로 문장 선택)
+	LLMEvaluator
+		입력: { "company": str, "bullets": str[], "citations": [{ "title": str, "url": str, "content": str }] }
+		출력:
+			{ "evaluation": { TRL|MRL|CRAAP|Materiality|ISSB|OTA_Compliance: { "score": number, "rationale": str, "references": str[] } },
+			"citation_summaries": [{ "title": str, "url": str, "summary": str }] }
+		목적: 6축(TRL/MRL/CRAAP/Materiality/ISSB/OTA) LLM 평가 + 인용 요약
+	파일: evagent/agents/TechSearchAgent.py
 
-	
-3. ESG/정책
-	GovESGSearch: 각국 ESG·탄소 규제 검색 (ESG Agent)
-	CorpESGSearch: 기업 도메인 기반 ESG 정책/보고서 검색 (ESG Agent)
+ESGAgent 툴
 
+	GovESGSearch
+		입력: { "regions": str[] }
+		출력: { [region]: { "policy": str, "carbon_neutral": int|null } }
+		목적: 지역별 정부 탄소중립/정책 요약(Tavily 사용 시 답변 활용)
+	CorpESGSearch
+		입력: { "oems": str[] }
+		출력: { [company]: { "target_year": int|null, "scope": ["S1","S2","S3"], "policy": str } }
+		목적: OEM 기업 ESG 목표/스코프 요약
+	ExternalRatings
+		입력: { "oems": str[] }
+		출력: { [company]: { "msci": str|null, "cdp": str|null } }
+		목적: MSCI/CDP 등급 힌트 추출(정규식 매칭)
+	파일: evagent/agents/ESGAgent.py
 
-4. 기술 요약
-	TechSearchAgent – Tools
-	SearchTool — 웹 검색 API 호출(뉴스/웹/학술/도메인 필터, 날짜 범위)
-	Fetcher — URL 가져오기(HTML/PDF/CSV), 리다이렉트/헤더 처리	
-	Parser — 본문/표/메타데이터 추출(HTML, PDF 텍스트화), 언어 감지
-	Deduper — 유사도/URL 해시 기반 중복 제거
-	Ranker — 최신성·권위도·일치도 가중 랭킹(예: 날짜↑, .gov/.edu/.org 가중)
-	Summarizer — 문서 요약·핵심 문장/수치 뽑기(문장별 근거 연결)
-	CitationBuilder — 문장별 근거 URL/발행일 매핑, 인용 리스트 생성
-	Normalizer — 수치/단위/날짜 표준화(예: kWh↔MWh, 2025-10-22 ISO)
-	CacheStore — 질의↔결과 캐시 저장/조회
-	RateLimiter — 호출 빈도 제어(벤더 API 쿼터 보호)
+ValueChainAgent 툴
 
-
-6. 각 Tool의 주 사용 에이전트
-	Value Chain Agent: visualization_tool, (보조로 tavily_tool)
-	Stock Agent: stock_analysis, create_stock_chart
-	ESG Agent: GovESGSearch, CorpESGSearch, (보조로 tavily_tool)
+	visualization_tool
+		입력: { "oem_df": DataFrame|json, "supplier_df": DataFrame|json, "out_dir": str }
+		출력: str // 저장된 PNG 경로
+		목적: OEM/배터리/HVAC 위치를 plotly scatter_geo로 시각화(PNG)
+파일: evagent/agents/ValueChainAgent.py
 	
 ## State
+Value Chain
 
-1) Global State
-	pg_conn: PostgreSQL 연결
-	data_path: 산출물 파일 경로 (str)
-	messages: 노드(에이전트)별 응답 누적
-	final_report: 최종 리포트 파일명 또는 경로
+타입: VCState — evagent/agents/ValueChainAgent.py:338
+필드
+data_dir: str
+out_dir: str
+oem_df: Optional[pd.DataFrame]
+sup_battery_df: Optional[pd.DataFrame]
+sup_hvac_df: Optional[pd.DataFrame]
+supplier_df: Optional[pd.DataFrame]
+counts_json: Optional[Dict[str, Dict[str, int]]]
+jit_analysis: Optional[Dict[str, Any]]
+jit_evaluation: Optional[Dict[str, Any]]
+map_path: Optional[str]
+thresholds_km: Dict[str, float] // {"near": 66, "region": 140}
+llm: Optional[Any]
+Stock
 
-	
-2) Value Chain Agent State
-	table(Data): PostgreSQL에서 가져온 공장/설비 데이터프레임 (DataFrame)
-	list_result: 클러스터링/요약 결과 (List[Dict[str, float]] 등)
-	cluster_map_image: 클러스터 시각화 이미지 경로 (str)
+별도 TypedDict 없음. 반환 구조 — evagent/agents/StockAnalyzerAgent.py:478
+결과 키
+oem_charts: Dict[str, str]
+supplier_charts: Dict[str, str]
+oem_data: List[Dict[str, Any]] // history 제외 직렬화
+supplier_data: List[Dict[str, Any]]
+trend_indicators: Dict[str, Any] // oem_trend, supplier_trend, correlation_score 등
+llm_evaluation: Dict[str, Any]
+ESG
 
+타입: ESGState — evagent/agents/ESGAgent.py:189
+필드
+regions: List[str]
+oems: List[str]
+gov_esg_findings: Optional[Dict[str, Any]]
+corp_esg_findings: Optional[Dict[str, Any]]
+external_ratings: Optional[Dict[str, Any]]
+out_dir: str
+TechSearch
 
-3) Stock Agent State
-	stock_chart_image: 생성된 주가 차트 이미지 경로 (str)
-	(선택) price_df, metrics_json 등 내부 분석 산출물
-
-
-4) ESG Agent State
-	gov_esg_findings: 국가/지역 ESG 정책 검색 결과 요약
-	corp_esg_findings: 기업 ESG 정책/보고서 요약
-
-
-5) TechSearch Agent State
-   query: str — 사용자가 던진 검색 질의(예: “EV 배터리 팩 공급거점 2024 생산량”)
-   constraints: dict — 필터(언어, 국가/도메인, 날짜 범위, 파일형식 포함/제외)
-   entities: list[str] — 회사/제품/지역 키워드 토큰화 결과
-   results: list[dict] — 1차 검색 결과(타이틀, URL, 스니펫, 날짜, 출처 도메인)
-   docs: list[dict] — 본문 추출/요약된 문서 블록(본문텍스트, 핵심문장, 추출표/수치)
-   citations: list[dict] — 인용 메타(문장 ↔ URL, 발행일, 접근일)
-   dedup_index: set — URL/문서 해시로 중복 제거용
-   cache: dict — 동일/유사 질의 캐시(결과 재사용)
-   output_json: dict — 최종 반환(JSON): { “summary”, “key_facts[]”, “links[]”, “citations[]” }
+타입: TechState — evagent/agents/TechSearchAgent.py:287
+필드
+company: str
+company_type: str
+domain: Optional[str]
+query_terms: Optional[List[str]]
+raw_hits: Optional[List[Dict[str, str]]]
+ranked_hits: Optional[List[Dict[str, str]]]
+answer: Optional[str]
+summary_bullets: Optional[List[str]]
+citations: Optional[List[Dict[str, str]]]
+evaluation: Optional[Dict[str, Any]] // TRL/MRL/CRAAP/Materiality/ISSB/OTA_Compliance
+citation_summaries: Optional[List[Dict[str, str]]]
+out_dir: str
 
 
 ## Tech Stack
 Category	Details
-Framework	LangGraph, LangChain, Python
+Framework	LangGraph, Python
 LLM	        GPT-4o-mini via OpenAI API
 Retrieval	Chroma
-Embedding	OpenAI, multilingual-e5-large
-DB	        PostgreSQL
+Embedding	OpenAI
 
 ## Agents
 	#Supervisor Agent
@@ -181,7 +218,7 @@ DB	        PostgreSQL
    
 7. TechSearch Agent
    	기사에 대한 요약 및 전기차 핵심기술 출력
-	🧩 기술 평가 지표 (Evaluation Metrics)
+    기술 평가 지표 (Evaluation Metrics)
 	구분	의미	평가 기준 요약
 	TRL (Technology Readiness Level)	기술성숙도	기술의 개발 단계 성숙도를 평가. (1: 기본원리 확인 ~ 9: 상용운영 완료)
 	MRL (Manufacturing Readiness Level)	제조성숙도	양산 준비 수준을 평가. (1: 개념설계 ~ 10: 전량 생산 단계)
@@ -192,12 +229,12 @@ DB	        PostgreSQL
    
 
 ## 산출 보고서 양식
-	📘 전기차 시장 트렌드 분석 레포트 – 보고서 양식 요약
+	전기차 시장 트렌드 분석 레포트 – 보고서 양식 요약
 
 	이 문서는 EV 시장 분석 보고서의 공식 템플릿입니다.
 	하위 Agent들이 생성한 JSON·이미지 데이터를 기반으로 자동 PDF 보고서를 생성합니다.
 
-	📑 구성 목차
+	구성 목차
 	1. 전기차 시장 트렌드 분석 레포트
 
 		보고서 표지 (제목 + 작성일)
