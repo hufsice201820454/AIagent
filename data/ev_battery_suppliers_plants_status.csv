@@ -1,0 +1,27 @@
+﻿Company,Plant,City,Country,Operational_Status
+TSMC,Hsinchu Science Park Fabs,Hsinchu,Taiwan,Operational
+TSMC,Fab 18 (Nanke),Tainan,Taiwan,Operational
+TSMC,Fab 15 (C. Taiwan Science Park),Taichung,Taiwan,Operational
+TSMC,Kaohsiung Site,Kaohsiung,Taiwan,Under Construction
+CATL,Ningde HQ Base,"Ningde, Fujian",China,Operational
+CATL,Liyang Base,"Liyang, Jiangsu",China,Operational
+CATL,Xining Base,"Xining, Qinghai",China,Operational
+CATL,Yibin Base,"Yibin, Sichuan",China,Operational
+CATL,Thuringia Plant (Arnstadt),"Erfurt/Arnstadt, Thuringia",Germany,Operational
+CATL,Debrecen Gigafactory,Debrecen,Hungary,Under Construction
+Panasonic,Suminoe Factory (Energy),Osaka,Japan,Operational
+Panasonic,Wakayama Plant,Wakayama,Japan,Operational
+Panasonic,Gigafactory Nevada (with Tesla),"Sparks, Nevada",USA,Operational
+Panasonic,De Soto Battery Plant,"De Soto, Kansas",USA,Under Construction
+Samsung SDI,Ulsan Plant,Ulsan,South Korea,Operational
+Samsung SDI,Cheonan Plant,Cheonan,South Korea,Operational
+Samsung SDI,Suwon (R&D/Pack),Suwon,South Korea,Operational
+Samsung SDI,Göd Plant,Göd,Hungary,Operational
+Samsung SDI,Indiana JV Plant (StarPlus Energy),"Kokomo, Indiana",USA,Under Construction
+LG Energy Solution,Ochang Complex,Cheongju (Ochang),South Korea,Operational
+LG Energy Solution,Nanjing Plant,Nanjing,China,Operational
+LG Energy Solution,Wrocław (Biskupice Podgórne),Wrocław area,Poland,Operational
+LG Energy Solution,Ultium Cells Ohio (with GM),"Lordstown, Ohio",USA,Operational
+LG Energy Solution,Ultium Cells Tennessee (with GM),"Spring Hill, Tennessee",USA,Operational
+LG Energy Solution,Ultium Cells Michigan (with GM),"Lansing, Michigan",USA,Under Construction
+LG Energy Solution,Arizona Cylindrical Plant,"Queen Creek, Arizona",USA,Under Construction

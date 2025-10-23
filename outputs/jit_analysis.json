@@ -1,0 +1,56 @@
+{
+  "analysis_type": "JIT Supply Chain Proximity Analysis",
+  "description": "Supplier count within proximity thresholds (66km and 140km from OEM plants)",
+  "companies": [
+    {
+      "company": "BMW",
+      "suppliers_within_66km": 1,
+      "suppliers_within_140km": 4
+    },
+    {
+      "company": "BYD",
+      "suppliers_within_66km": 3,
+      "suppliers_within_140km": 11
+    },
+    {
+      "company": "Ford",
+      "suppliers_within_66km": 7,
+      "suppliers_within_140km": 12
+    },
+    {
+      "company": "GM",
+      "suppliers_within_66km": 12,
+      "suppliers_within_140km": 18
+    },
+    {
+      "company": "Hyundai Motor Group",
+      "suppliers_within_66km": 29,
+      "suppliers_within_140km": 48
+    },
+    {
+      "company": "Li Auto",
+      "suppliers_within_66km": 4,
+      "suppliers_within_140km": 6
+    },
+    {
+      "company": "Rivian",
+      "suppliers_within_66km": 0,
+      "suppliers_within_140km": 0
+    },
+    {
+      "company": "Tesla",
+      "suppliers_within_66km": 2,
+      "suppliers_within_140km": 3
+    },
+    {
+      "company": "Volkswagen",
+      "suppliers_within_66km": 3,
+      "suppliers_within_140km": 11
+    },
+    {
+      "company": "XPeng",
+      "suppliers_within_66km": 4,
+      "suppliers_within_140km": 6
+    }
+  ]
+}

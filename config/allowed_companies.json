@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "version": 1,
+    "note": "Whitelist for EV project — only these companies are allowed."
+  },
+  "companies": [
+    {"name": "Tesla", "ticker": "TSLA", "country": "US", "category": "OEM", "aliases": ["Tesla Inc"]},
+    {"name": "Rivian", "ticker": "RIVN", "country": "US", "category": "OEM", "aliases": ["Rivian Automotive"]},
+    {"name": "General Motors", "ticker": "GM", "country": "US", "category": "OEM", "aliases": ["GM", "General Motors Company"]},
+    {"name": "Ford", "ticker": "F", "country": "US", "category": "OEM", "aliases": ["Ford Motor", "Ford Motor Company"]},
+    {"name": "BYD", "ticker": "BYDDF", "country": "CN", "category": "OEM", "aliases": ["BYD Company", "BYD Company Limited", "BYD Co Ltd"]},
+    {"name": "Li Auto", "ticker": "LI", "country": "CN", "category": "OEM", "aliases": ["Li Auto Inc"]},
+    {"name": "XPeng", "ticker": "XPEV", "country": "CN", "category": "OEM", "aliases": ["Xpeng Motors"]},
+    {"name": "BMW", "ticker": "BMWYY", "country": "DE", "category": "OEM", "aliases": ["BMW AG", "Bayerische Motoren Werke", "BMW Group"]},
+    {"name": "Volkswagen", "ticker": "VWAGY", "country": "DE", "category": "OEM", "aliases": ["Volkswagen AG", "VW"]},
+
+    {"name": "TSMC", "ticker": "TSM", "country": "TW", "category": "Battery/Semi", "aliases": ["Taiwan Semiconductor Manufacturing Company", "Taiwan Semiconductor"]},
+    {"name": "CATL", "ticker": "300750.SZ", "country": "CN", "category": "Battery", "aliases": ["Contemporary Amperex Technology", "CATL Ltd"]},
+    {"name": "Panasonic", "ticker": "PCRFY", "country": "JP", "category": "Battery", "aliases": ["Panasonic Holdings", "Panasonic Corporation"]},
+    {"name": "Samsung SDI", "ticker": "006400.KS", "country": "KR", "category": "Battery", "aliases": ["Samsung SDI Co., Ltd.", "Samsung SDI Co"]},
+    {"name": "LG Energy Solution", "ticker": "373220.KS", "country": "KR", "category": "Battery", "aliases": ["LG Energy Solution Ltd", "LGES", "LG에너지솔루션"]},
+
+    {"name": "DENSO", "ticker": "6902.T", "country": "JP", "category": "HVAC", "aliases": ["DENSO Corporation", "Denso"]},
+    {"name": "Valeo", "ticker": "FR.PA", "country": "FR", "category": "HVAC", "aliases": ["Valeo SA"]},
+    {"name": "Gentherm", "ticker": "THRM", "country": "US", "category": "HVAC", "aliases": ["Gentherm Incorporated"]},
+    {"name": "Modine", "ticker": "MOD", "country": "US", "category": "HVAC", "aliases": ["Modine Manufacturing"]},
+    {"name": "Dana", "ticker": "DAN", "country": "US", "category": "HVAC", "aliases": ["Dana Incorporated"]},
+    {"name": "Hanon Systems", "ticker": "018880.KS", "country": "KR", "category": "HVAC", "aliases": ["Hanon Systems Co., Ltd.", "한온시스템"]}
+  ]
+}

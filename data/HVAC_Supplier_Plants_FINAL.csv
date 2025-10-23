@@ -1,0 +1,97 @@
+Company,Plant,City,Country,Operational_Status
+DENSO Corporation,DENSO Manufacturing Michigan (DMMI),"Battle Creek, Michigan",USA,Operational
+DENSO Corporation,DENSO Manufacturing Tennessee (DMTN),"Maryville, Tennessee",USA,Operational
+Hanon Systems,Auto Parts Hungary Kft. (Rétság),Rétság,Hungary,Operational
+Hanon Systems,Hanon Systems Hungary Kft. (Székesfehérvár),Székesfehérvár,Hungary,Operational
+Hanon Systems,Shorter Manufacturing Facility,"Shorter, Alabama",USA,Operational
+Hanon Systems,Gyeongju Manufacturing Site,Gyeongju,South Korea,Operational
+Valeo SA,Valeo Thermal Systems Skawina,Skawina,Poland,Operational
+Valeo SA,Valeo Poland (multiple sites in south Poland),Silesia & Małopolska (multiple),Poland,Operational
+Gentherm Incorporated,Celaya Production Facility,"Celaya, Guanajuato",Mexico,Operational
+Modine Manufacturing Company,Lawrenceburg BTMS Manufacturing,"Lawrenceburg, Tennessee",USA,Operational
+Modine Manufacturing Company,Pontevico EVantage Manufacturing,"Pontevico, Brescia",Italy,Operational (from 2024)
+Modine Manufacturing Company,Franklin Facility (new),"Franklin, Wisconsin",USA,Planned / Opening
+Dana Incorporated,Thermal Products – Auburn Hills,"Auburn Hills, Michigan",USA,Planned / Under Construction
+Hanon Systems,Hanon Systems Daejeon,Daejeon,South Korea,Operational
+Hanon Systems,Hanon Systems Pyeongtaek,Pyeongtaek,South Korea,Operational
+Hanon Systems,Hanon Systems Pangyo,Seongnam (Pangyo),South Korea,Operational
+Hanon Systems,Hanon Systems Ulsan,Ulsan,South Korea,Operational
+Hanon Systems,Hanon Systems Gyeongju,Gyeongju,South Korea,Operational
+Hanon Systems,Hanon Systems EFP Korea Inc. Asan,Asan,South Korea,Operational
+Hanon Systems,"Hanon Systems (Beijing) Co., Ltd.",Beijing (Shunyi),China,Operational
+Hanon Systems,"Beijing BHAP Hanon Systems Co., Ltd.",Beijing (Daxing),China,Operational
+Hanon Systems,"FAWER Hanon Thermal Systems (Changchun) Co., Ltd.",Changchun,China,Operational
+Hanon Systems,"FAWER Hanon Automotive Components (Changchun) Co., Ltd.",Changchun,China,Operational
+Hanon Systems,"Hanon Systems EFP (Changzhou) Co., Ltd.",Changzhou,China,Operational
+Hanon Systems,"FAWER Hanon Thermal Systems (Chengdu) Co., Ltd.",Chengdu,China,Operational
+Hanon Systems,"Chongqing Hanon Jianshe Automotive Thermal Systems Co., Ltd.",Chongqing,China,Operational
+Hanon Systems,"Hanon Systems (Dalian) Co., Ltd.",Dalian,China,Operational
+Hanon Systems,"Foshan FAWER Hanon Thermal Systems Co., Ltd.",Foshan,China,Operational
+Hanon Systems,"Hanon Systems (Hubei) Co., Ltd.",Wuhan (Jiangxia),China,Operational
+Hanon Systems,"Hanon Systems (Nanchang) Co., Ltd.",Nanchang,China,Operational
+Hanon Systems,"Hanon Jie Xi Si Systems (Nanjing) Co., Ltd.",Nanjing,China,Operational
+Hanon Systems,"Hanon Systems (Shanghai) Co., Ltd.",Shanghai (Xuhui),China,Operational
+Hanon Systems,"Hanon Systems (Yancheng) Co., Ltd.",Yancheng,China,Operational
+Hanon Systems,Hanon Climate Systems India Pvt. Ltd.,Bhiwadi,India,Operational
+Hanon Systems,Hanon Automotive Systems India Pvt. Ltd.,Chennai (Maraimalai Nagar),India,Operational
+Hanon Systems,Hanon Systems India - Pune Site,Pune (Sanaswadi),India,Operational
+Hanon Systems,Hanon Systems South Africa (PTY) Ltd.,Port Elizabeth (Gqeberha),South Africa,Operational
+Hanon Systems,Hanon Systems (Thailand) Co. Ltd.,Rayong,Thailand,Operational
+Hanon Systems,Hanon Systems Plovdiv EOOD,Plovdiv (Stryama),Bulgaria,Operational
+Hanon Systems,Hanon Systems Autopal s.r.o.,Hluk,Czech Republic,Operational
+Hanon Systems,Hanon Systems Autopal s.r.o. (Nový Jičín),Nový Jičín,Czech Republic,Operational
+Hanon Systems,Hanon Systems Thermal Technology s.r.o.,Kladno,Czech Republic,Operational
+Hanon Systems,Hanon Systems Charleville SAS,Charleville-Mézières,France,Operational
+Hanon Systems,Hanon Systems Deutschland GmbH,Kerpen,Germany,Operational
+Hanon Systems,Hanon Systems EFP Deutschland GmbH,Bad Homburg,Germany,Operational
+Hanon Systems,Hanon Systems Auto Parts Hungary Kft.,Rétság,Hungary,Operational
+Hanon Systems,Hanon Systems Hungary Kft. (Alba),Székesfehérvár,Hungary,Operational
+Hanon Systems,Hanon Systems Hungary Kft. (Pécs),Pécs,Hungary,Operational
+Hanon Systems,Hanon Systems Italia Benevento s.r.l.,Benevento,Italy,Operational
+Hanon Systems,Hanon Systems Italia Campiglione s.r.l.,Campiglione Fenile,Italy,Operational
+Hanon Systems,Hanon Systems Netherlands Coöperatief U.A.,Heerlen,Netherlands,Operational
+Hanon Systems,"Hanon Systems Portugal, S.A.",Palmela,Portugal,Operational
+Hanon Systems,Hanon Systems Slovakia s.r.o.,Ilava,Slovakia,Operational
+Hanon Systems,Hanon Automotive Climate Systems Mfg. Co.,Dilovası (Kocaeli),Türkiye,Operational
+Hanon Systems,Hanon Systems UK Ltd.,Birmingham,United Kingdom,Operational
+Hanon Systems,Hanon Systems Alabama Corp.,"Shorter, Alabama",USA,Operational
+Hanon Systems,Hanon Systems Statesboro,"Statesboro, Georgia",USA,Under Construction
+Hanon Systems,"Hanon Systems USA, LLC (Carey)","Carey, Ohio",USA,Operational
+Hanon Systems,Hanon Systems USA (Novi),"Novi, Michigan",USA,Operational
+Hanon Systems,Hanon Systems Loudon,"Loudon, Tennessee",USA,Operational
+Hanon Systems,Hanon Systems Canada Inc.,"Belleville, Ontario",Canada,Operational
+Hanon Systems,Hanon Systems EFP Canada Ltd.,"Concord, Ontario",Canada,Operational
+Hanon Systems,Hanon Systems Canada (Woodbridge),"Woodbridge, Ontario",Canada,Operational
+Hanon Systems,Coclisa S.A. de C.V. (Juárez 1 FT),"Ciudad Juárez, Chihuahua",Mexico,Operational
+Hanon Systems,Juárez 1 PTC/HEX,"Ciudad Juárez, Chihuahua",Mexico,Operational
+Hanon Systems,Juárez 2,"Ciudad Juárez, Chihuahua",Mexico,Operational
+Hanon Systems,"EFP Operations Mexicana, S.A. de C.V.","Monterrey (Apodaca), Nuevo León",Mexico,Operational
+Hanon Systems,Climate Systems Mexicana S.A. de C.V.,"Monterrey (Guadalupe), Nuevo León",Mexico,Operational
+Hanon Systems,Querétaro Site (El Marqués),"El Marqués, Querétaro",Mexico,Operational
+Hanon Systems,"J. Clima Sistemas México, S.A. de C.V.","Salamanca, Guanajuato",Mexico,Operational
+DENSO Corporation,DENSO Manufacturing Arkansas,"Osceola, Arkansas",USA,Operational
+DENSO Corporation,DENSO Manufacturing North Carolina,"Statesville, North Carolina",USA,Operational
+DENSO Corporation,DENSO Thermal Systems S.p.A.,Poirino (Turin),Italy,Operational
+DENSO Corporation,DENSO Czech s.r.o.,Liberec,Czech Republic,Operational
+DENSO Corporation,DENSO Hungary Ltd.,Székesfehérvár,Hungary,Operational
+DENSO Corporation,DENSO Poland Sp. z o.o.,Szczecin,Poland,Operational
+DENSO Corporation,DENSO (Guangzhou) Nansha,Guangzhou (Nansha),China,Operational
+DENSO Corporation,DENSO (Shanghai) Thermal Systems,Shanghai,China,Operational
+Valeo SA,Valeo Thermal Systems Czech,Žebrák,Czech Republic,Operational
+Valeo SA,Valeo Climatisation Frankreich,La Verrière,France,Operational
+Valeo SA,Valeo Thermal Systems Hungary,Veszprém,Hungary,Operational
+Valeo SA,Valeo Thermal Systems Mexico,San Luis Potosí,Mexico,Operational
+Valeo SA,Valeo Thermal Systems China,Wuhan,China,Operational
+Gentherm Incorporated,Wuhu Manufacturing,"Wuhu, Anhui",China,Operational
+Gentherm Incorporated,Odzaci Facility,Odžaci,Serbia,Operational
+Gentherm Incorporated,Prilep Facility,Prilep,North Macedonia,Operational
+Gentherm Incorporated,Farmington Hills Tech/Assembly,"Farmington Hills, Michigan",USA,Operational
+Modine Manufacturing Company,Lawrenceburg EV/BTMS,"Lawrenceburg, Tennessee",USA,Operational
+Modine Manufacturing Company,Franklin Facility (EVantage),"Franklin, Wisconsin",USA,Planned / Opening
+Modine Manufacturing Company,Pontevico EVantage,"Pontevico, Brescia",Italy,Operational
+Modine Manufacturing Company,Sosnowiec Thermal Systems,Sosnowiec,Poland,Operational
+Dana Incorporated,Auburn Hills Thermal Products,"Auburn Hills, Michigan",USA,Operational
+Dana Incorporated,St. Clair Thermal Facility,"St. Clair, Michigan",USA,Operational
+Dana Incorporated,Thermal Products - Neu-Ulm,Neu-Ulm,Germany,Operational
+Dana Incorporated,Thermal Management - Birmingham,Birmingham,United Kingdom,Operational
+Dana Incorporated,Queretaro Thermal Plant,Querétaro,Mexico,Operational

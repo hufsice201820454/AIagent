@@ -1,0 +1,27 @@
+.env# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.ENV/
+env/
+venv/
+
+# Project-specific
+evagent/.env
+evagent/*.env
+evagent/outputs/
+evagent/.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
