@@ -7,6 +7,8 @@
 	3) 기술 → 완성차 10~20문장, 협력사 5~10문장으로 차별화 기술 요약
 	4) 주식 → 시장 지표/차트와 1~3의 결과를 병합해 최종 리포트 생성
 
+## 모든 결과는 output폴더에 저장되어 있습니다. (하위 Agent 생성 결과 + 최종 보고서 (html/pdf))
+
 ## Core Agents
 	Value Chain Agent: 공장 입지/가동 현황 분석, 지리적 클러스터링
 	TechSearch Agent: 완성차·배터리·공조의 차별화 기술 검색/요약
@@ -34,7 +36,6 @@ Objective: EV 관련 시장(OEM, 배터리, 공조) 분석
 - 보고서 출력: ReportWriterAgent 내 HTML→PDF 변환(Playwright/Chromium)
 
 
-
 각 Tool의 주 사용 에이전트
 	Value Chain Agent: visualization_tool, (보조로 tavily_tool)
 	Stock Agent: stock_analysis, create_stock_chart
@@ -55,7 +56,6 @@ Objective: EV 관련 시장(OEM, 배터리, 공조) 분석
 	JIT 분석 결과 JIT 평가 결과 (List[Dict[str, float]] -> Json리턴)
     JIT 분석 결과 시각화 그래프 - map_oem_suppliers.png
 	
-
 
 4) Stock Agent State
 	stock_chart_image: 생성된 주가 차트 이미지 경로 (str)
@@ -166,11 +166,40 @@ Embedding	OpenAI, multilingual-e5-large
 	ISSB Alignment	국제 지속가능 공시 연계성	IFRS S1/S2 등 국제 기준(ISSB, IFRS)과의 정합성 평가.
 	OTA_Compliance	OTA(Over-the-Air) 규제 준수	ISO 24089, UNECE R156 등 차량 OTA 업데이트 관련 표준 및 규제 준수 여부 평가.
 
-8. 종합 결과 산정
+## 종합 결과 산정
    1) Value-Chain : 30
    2) ESG : 30
    3) TechSearch : 30
    4) StockAnalyer: 10
+
+## 종합 결과 선정 이유
+
+# Value-Chain 30
+자동차 산업의 공급업체 집적과 근접성은 생산성·품질·물류 효율과 연관됨(집적경제, JIT 지원).
+MIT Sloan Working Paper: 일본 자동차 하도급 네트워크와 JIT의 지역적 근접성 분석. Smitka, 1991. https://dspace.mit.edu/handle/1721.1/47204
+연방준비은행(시카고) 연구: 자동차 공급업체 공장의 군집화와 agglomeration economies. Klier & McMillen, 2008. 
+
+
+# ESG 30
+대규모 메타연구: ESG-재무성과 간 양(+)의 상관이 관찰됨(표본·방법론별 차이는 존재).
+Friede, Busch, Bassen (2015) “ESG and Financial Performance: Aggregated Evidence from more than 2000 Empirical Studies.” Journal of Sustainable Finance & Investment. https://www.tandfonline.com/doi/abs/10.1080/20430795.2015.1118917
+Khan, Serafeim, Yoon (2016) “Corporate Sustainability: First Evidence on Materiality.” (SSRN/Harvard) 재무적으로 “중요한” ESG 이슈에 대한 성과와 초과성과의 관련성 보고. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2575912
+ISSB(IFRS S1/S2): 투자자 의사결정에 유용한 지속가능성 공시 표준으로 제정. https://www.ifrs.org/issued-standards/ifrs-sustainability-standards/
+
+
+# TechSearch 30
+TRL/MRL 등 기술·제조 성숙도 지표는 사업화 리스크(비용·일정 지연) 저감과 연계되어 평가·투자 의사결정에 활용됨.
+예시 출처:
+GAO “Technology Readiness Assessment Guide” (GAO-20-48G): TRL 활용 가이드, 성숙도 부족은 프로그램 실패·초과비용 리스크 증가. https://www.gao.gov/products/gao-20-48g
+DoD “Manufacturing Readiness Level (MRL) Deskbook”: MRL로 제조 성숙도 평가·리스크 관리. (DAU 배포판)
+OTA 관련 규제·표준은 안전·보안·규정준수의 객관적 기준 제공(예: UNECE R156, ISO 24089). https://unece.org/ (R156), https://www.iso.org/ (ISO 24089)
+
+
+# Stock 10
+주가 지표는 시장 심리·유동성 등 단기 요인이 크고, 실물·장기 운영성과의 설명력은 제한적이라는 연구가 존재. 전략·운영평가의 보조지표로 낮은 가중치 정당화 가능.
+Shiller (1981) “Do Stock Prices Move Too Much to be Justified by Subsequent Changes in Dividends?” American Economic Review. 주가 변동성 과잉 논증. (JSTOR/NBER 게재)
+Fischer Black (1986) “Noise.” The Journal of Finance. 가격에 반영된 “노이즈” 개념화로 정보 대비 변동성 강조.
+장기 펀더멘털 예측보다는 단기 모멘텀·역전 현상 보고(예: Jegadeesh & Titman 1993), 전략/기술·운영 지표와 목적이 상이.
    
 
 ## 산출 보고서 양식
