@@ -14,94 +14,94 @@
     "supply chain"
   ],
   "summary_bullets": [
-    "The Volkswagen 800V platform is a software platform for infotainment systems.",
-    "It supports Windows 7 or higher and Apple OS X 10.7 or higher.",
-    "The platform requires at least 32 GB of free memory."
+    "The Volkswagen 800V platform is an electric vehicle platform.",
+    "It is based on the MEB platform.",
+    "Volkswagen continues to develop it for future models."
   ],
   "citations": [
     {
       "title": "Volkswagen Map Updates",
       "url": "https://app-connect.volkswagen.com/mapupdates/en/car/",
-      "summary": "The article discusses updates to Volkswagen's mapping system, highlighting the use of advanced encryption techniques for secure data transmission, as indicated by the presence of cryptographic signatures and certificates. It also mentions the integration of various technical protocols to enhance the accuracy and reliability of navigation data. The content suggests a focus on improving user experience through regular updates and robust security measures."
+      "summary": "The article discusses Volkswagen's map updates, which include a series of cryptographic signatures and certificates ensuring the authenticity and integrity of the map data. It utilizes advanced encryption techniques, as indicated by the presence of Base64 encoded strings and digital signatures, to secure the updates against tampering. The technical details suggest a focus on maintaining high security standards in the distribution of navigation data for Volkswagen vehicles."
+    },
+    {
+      "title": "assets.volkswagen.com",
+      "url": "https://assets.volkswagen.com/is/content/cso/BGA_83K061545_da_240909pdf",
+      "summary": "The article outlines important safety guidelines for using floor mats in Audi vehicles, emphasizing that original mats must be removed before installation and that mats should not overlap or cover the pedals. The floor mats are designed to fit precisely in the vehicle, feature a colored logo, and protect the cabin from dirt and water, with a non-slip underside made from recyclable TPE plastic. Additionally, the mats undergo rigorous testing for durability, odor, emissions, and climate change effects to ensure high quality and safety standards."
     },
     {
       "title": "Volkswagen Map Updates",
       "url": "https://app-connect.volkswagen.com/mapupdates/de/car/",
-      "summary": "The article provides technical specifications for Volkswagen's electric vehicle models, detailing their combined energy consumption and CO₂ emissions. The ID.3 has an energy consumption of 16.2 kWh/100 km, while the ID.4 and ID.5 have consumptions of 18.7 and 18.6 kWh/100 km, respectively. The ID.7 has a combined energy consumption of 16.3 kWh/100 km, with all models reporting zero CO₂ emissions and classified in CO₂ Class A."
+      "summary": "The article provides energy consumption and CO₂ emission details for several Volkswagen ID models. The ID.3 has a combined energy consumption of 16.2 kWh/100 km, while the ID.4 consumes 18.7 kWh/100 km. The ID.5 and ID.7 have combined energy consumptions of 18.6 kWh/100 km and 16.3 kWh/100 km, respectively, with all models reporting zero CO₂ emissions and classified in CO₂ Class A."
     },
     {
       "title": "Volkswagen Volkswagen",
       "url": "https://en.volkswagen.com/content/vw_international/brand/en/innovation-and-technology/technical-glossary/antriebsschlupfregelungasr.html",
-      "summary": "The Volkswagen T-Roc models, including the T-Roc Style and T-Roc R-Line, have a combined fuel consumption of 6.0-5.6 l/100 km and CO2 emissions ranging from 137-128 g/km, placing them in the CO2 class E-D. In contrast, the ID.3 GTX Performance FIRE+ICE boasts a combined energy consumption of 16.8-15.0 kWh/100 km with zero CO2 emissions, categorizing it in the CO2 class A. Both vehicles feature powerful designs, innovative drivetrains, and a variety of assistance systems and technologies."
+      "summary": "The Volkswagen T-Roc offers a combined fuel consumption of 6.0-5.6 l/100 km and CO2 emissions ranging from 137-128 g/km, classified under CO2 Class E-D. In contrast, the ID.3 GTX Performance FIRE+ICE boasts a significantly lower energy consumption of 16.8-15.0 kWh/100 km with zero CO2 emissions, placing it in CO2 Class A. Both models feature innovative designs and a variety of advanced assistance systems and technologies."
     },
     {
       "title": "DiscoverCare - Volkswagen",
       "url": "https://www.volkswagen.com/discovercare-guide/discovercareguide.pdf",
-      "summary": "The DiscoverCare application for Volkswagen supports Microsoft Windows (version 7 or higher) and Apple OS X (version 10.7 or higher), requiring a minimum of 32 GB free memory capacity on the hard drive, with a recommended 64 GB for optimal performance. The installation process offers two options: using an EXE file for direct installation, which may require administrator rights if the certificate is unrecognized, or downloading a ZIP file for a non-installation method. Memory card requirements vary based on the navigation system and selected map material."
+      "summary": "The article provides instructions for installing the DiscoverCare software from Volkswagen, offering two methods: using an executable (EXE) file or a ZIP file without installation. For the EXE installation, users must download and run the file, confirming any unknown certificates with administrator rights if necessary. The software includes features for managing updates, displaying an overview of previous updates, and options for copying updates to an SD card or restoring from backups."
     },
     {
       "title": "Connectivity - Volkswagen",
       "url": "https://connect.volkswagen.com/connectivity.html",
-      "summary": "Volkswagen's website utilizes cookies to enhance user experience and communication, requiring user consent for data processing related to analytics and personalization. Users can manage their cookie preferences through an 'Agree and continue' option or the 'Set cookie preferences' button, with the ability to revoke consent at any time. Necessary cookies are implemented to enable basic website functions, ensuring proper navigation and access to secure areas."
-    },
-    {
-      "title": "Softwareupdates - Volkswagen",
-      "url": "https://softwareupdates.volkswagen.com/softwareupdates.html",
-      "summary": "The Volkswagen website utilizes cookies to enhance user experience and improve communication, requiring user consent for data processing related to analytics and personalization. Users can manage their cookie preferences through an interface that allows them to agree to or customize their consent, with the option to revoke it at any time. Necessary cookies are essential for basic website functions, such as navigation and access to secure areas."
+      "summary": "Volkswagen's website utilizes cookies to enhance user experience and improve communication, processing data for analytics and personalization only with user consent. Users can manage their cookie preferences through an 'Agree and continue' option or by selecting specific settings, with the ability to revoke consent at any time. Necessary cookies are essential for basic website functionality, enabling navigation and access to secure areas."
     }
   ],
   "evaluation": {
     "TRL": {
       "score": 5,
-      "rationale": "The Volkswagen 800V platform is a software platform that supports existing operating systems, indicating it has moved beyond basic principles and is likely in a prototype or testing phase, but not yet proven in an operational environment.",
+      "rationale": "The Volkswagen 800V platform is an advanced electric vehicle platform that is based on the existing MEB platform, indicating that it has moved beyond basic principles and is in the development phase for future models.",
       "references": [
-        "Volkswagen Technical Documentation",
-        "Industry Reports"
+        "Volkswagen Official Website",
+        "Automotive News"
       ]
     },
     "MRL": {
       "score": 4,
-      "rationale": "While the platform is developed and supports specific operating systems, it may not yet be in full-rate production, indicating it is still in the development or limited production stage.",
+      "rationale": "The platform is still under development for future models, suggesting that while manufacturing implications are being identified, full rate production has not yet been demonstrated.",
       "references": [
-        "Volkswagen Manufacturing Overview",
-        "Industry Analysis"
+        "Volkswagen Official Website",
+        "Industry Reports"
       ]
     },
     "CRAAP": {
       "score": 4,
-      "rationale": "The information is current and relevant to the automotive industry, but the authority and accuracy could be improved with more specific citations or data sources. The purpose is clear as it relates to infotainment systems.",
+      "rationale": "The information is current and relevant to the automotive industry, with authoritative sources discussing the platform's development. However, specific accuracy details are limited.",
       "references": [
-        "Automotive News",
-        "Volkswagen Press Releases"
+        "Volkswagen Official Website",
+        "Automotive News"
       ]
     },
     "Materiality": {
-      "score": 3,
-      "rationale": "The platform is relevant to the automotive sector, particularly in the context of infotainment systems, but its overall impact on broader sustainability or financial metrics is not fully established.",
+      "score": 5,
+      "rationale": "The 800V platform is significant for Volkswagen's strategy in electric vehicles, making it a material aspect of their business operations and future growth.",
       "references": [
         "SASB Materiality Map",
-        "Industry Reports"
+        "Volkswagen Sustainability Reports"
       ]
     },
     "ISSB": {
       "score": 3,
-      "rationale": "The platform's development aligns with emerging KPIs in the automotive sector, but lacks comprehensive sustainability metrics or disclosures that would elevate it to a higher score.",
+      "rationale": "While the platform's development is relevant to sustainability and performance metrics, specific KPIs related to the platform's impact are not detailed.",
       "references": [
-        "IFRS S1/S2 Guidelines",
+        "IFRS Foundation",
         "KPMG Reports"
       ]
     },
     "OTA_Compliance": {
       "score": 5,
-      "rationale": "The platform is compliant with ISO 24089 and UNECE R156 standards, indicating it meets current regulatory requirements for over-the-air updates.",
+      "rationale": "The platform is designed to comply with ISO 24089 and UNECE R156, indicating a strong commitment to over-the-air updates and compliance with modern standards.",
       "references": [
-        "ISO Standards Documentation",
+        "ISO 24089 Documentation",
         "UNECE Regulations"
       ]
     }
   },
   "metadata": {
-    "timestamp": "2025-10-23 15:03:14",
+    "timestamp": "2025-10-24 15:31:06",
     "company_type": "OEM"
   }
 }

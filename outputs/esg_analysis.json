@@ -9,58 +9,56 @@
   ],
   "government_policies": {
     "KR": {
-      "policy": "South Korea aims for carbon neutrality by 2050. The government has set interim targets for 2030 and 2045. Critics argue the plan prioritizes nuclear energy over renewables.",
+      "policy": "South Korea aims to achieve net zero carbon emissions by 2050. The government has set interim targets for 2030 and 2045. Current policies are deemed insufficient for meeting this goal.",
       "carbon_neutral": 2030
     },
     "CN": {
-      "policy": "China's official target is to achieve carbon neutrality by 2060. The country aims to peak carbon dioxide emissions before 2030. This target is part of China's broader climate action plan.",
-      "carbon_neutral": 2030
+      "policy": "China's official target is to achieve carbon neutrality by 2060. The target was reaffirmed in 2021. The goal is part of the 14th Five-Year Plan.",
+      "carbon_neutral": 2060
     },
     "JP": {
-      "policy": "Japan's government aims for carbon neutrality by 2050. The target is legally established and supported by local governments. The pathway remains unclear beyond 2030.",
-      "carbon_neutral": 2030
+      "policy": "Japan's official government target is to achieve net zero carbon emissions by 2050. This target was legally established in 2021. The government is actively working towards this goal.",
+      "carbon_neutral": 2050
     },
     "EU": {
-      "policy": "The European Union aims to achieve climate neutrality by 2050. The EU proposed a 2040 emissions reduction target of 90%. The EU's climate neutrality goal is part of the European Green Deal.",
-      "carbon_neutral": 2040
+      "policy": "The European Union has set a net zero carbon target for 2050. The European Green Deal outlines this policy. The EU aims to become the first climate-neutral continent.",
+      "carbon_neutral": 2050
     },
     "US": {
-      "policy": "The United States government aims for net-zero carbon emissions by 2050. This target was reaffirmed by the U.S. Department of State in 2021.",
+      "policy": "The United States government aims to achieve net-zero emissions by 2050. This target was set by President Joe Biden in 2021.",
       "carbon_neutral": 2050
     }
   },
   "corporate_esg_goals": {
     "Tesla": {
-      "target_year": 2040,
+      "target_year": 2050,
       "scope": [
-        "S1",
-        "S3"
+        "S1"
       ],
-      "policy": "Tesla aims for net-zero emissions by 2040, reducing Scope 1, 2, and 3 emissions. It has cut Scope 1 and 2 emissions by 41% since 2021. Scope 3 emissions remain its biggest challenge."
+      "policy": "Tesla aims for net-zero GHG emissions by 2050, reports Scope 1, 2, and 3 emissions, and has reduced Scope 1 and 2 emissions by 41%."
     },
     "Rivian": {
       "target_year": 2040,
       "scope": [
         "S1"
       ],
-      "policy": "Rivian aims for net-zero emissions by 2040. Scope 1, 2, and 3 emissions are tracked. Rivian achieved 100% renewable energy usage in 2022."
+      "policy": "Rivian aims for net-zero emissions by 2040, with 100% renewable energy for charging networks since 2022. Scope 1, 2, and 3 emissions are tracked separately. Rivian's 2023 emissions data shows progress towards sustainability goals."
     },
     "General Motors": {
-      "target_year": 2035,
+      "target_year": 2025,
       "scope": [
         "S1",
         "S3"
       ],
-      "policy": "General Motors aims for net zero carbon emissions by 2040, targeting 72% reduction in Scope 1 and 2 emissions by 2035, and 51% reduction in Scope 3 emissions by 2035."
+      "policy": "General Motors aims for net zero by 2040, targeting 72% reduction in Scope 1 and 2 emissions by 2035, and 51% in Scope 3 emissions by 2035. Renewable electricity targets are 2025 for U.S. and 2035 globally."
     },
     "Ford": {
       "target_year": 2035,
       "scope": [
         "S1",
-        "S2",
         "S3"
       ],
-      "policy": "Ford aims for net zero emissions by 2050, targeting Scope 1 and 2 reductions by 76% by 2035 and Scope 3 by 50% by 2035. Scope 1 covers direct emissions, Scope 2 covers energy-related emissions, and Scope 3 covers supply chain emissions."
+      "policy": "Ford aims for net zero emissions by 2050, targeting 76% reduction in Scope 1 and 2 emissions by 2035 and 50% in Scope 3 emissions by 2035. Ford has reduced Scope 1, 2, and 3 emissions by 35.4% since 2017."
     },
     "BYD": {
       "target_year": 2030,
@@ -68,20 +66,23 @@
         "S1",
         "S3"
       ],
-      "policy": "BYD aims to achieve carbon neutrality by 2045, with a 50% reduction in operational carbon emissions by 2030. Scope 1 and 2 emissions data for 2022 is available, but Scope 3 targets are not specified."
+      "policy": "BYD aims for net zero by 2045, targeting 50% reduction in operational carbon emissions by 2030. Scope 1 and 2 emissions data is incomplete for 2022. Scope 3 emissions are not reported."
     },
     "Li Auto": {
-      "target_year": 2050,
-      "scope": [],
-      "policy": "Li Auto aims for net zero by 2050. Scopes 1, 2, and 3 emissions are part of this target. The company focuses on low-carbon operations and sustainability."
-    },
-    "XPeng": {
-      "target_year": null,
+      "target_year": 2030,
       "scope": [
         "S1",
+        "S2",
         "S3"
       ],
-      "policy": "XPeng aims for net zero emissions. Scope 1 and 2 emissions are significantly reduced. Scope 3 targets are under development."
+      "policy": "Li Auto aims for net-zero emissions by 2030, targeting Scope 1 and Scope 2 reductions by 90% and Scope 3 by 97% from 2019 baseline. Scope 1 and 2 cover emissions under direct control, while Scope 3 includes indirect emissions. Li Auto's 2023 ESG report outlines its governance and sustainability efforts."
+    },
+    "XPeng": {
+      "target_year": 2024,
+      "scope": [
+        "S1"
+      ],
+      "policy": "XPeng aims for net zero emissions by 2035. Scope 1, 2, and 3 emissions are part of its sustainability goals. XPeng's 2024 ESG report highlights its progress."
     },
     "BMW": {
       "target_year": 2030,
@@ -89,15 +90,14 @@
         "S1",
         "S3"
       ],
-      "policy": "BMW targets net-zero emissions by 2050, with scope 1 and 2 emissions reduced by 80% by 2030, and scope 3 emissions reduced by 22% and 50% by 2030."
+      "policy": "BMW targets net-zero emissions by 2050, reducing Scope 1 and 2 by 80% by 2030, and Scope 3 by 22% and 50% by 2030. The company aims to have 50% of its sales from electric vehicles by 2030. BMW Group's emissions targets are science-based."
     },
     "Volkswagen": {
       "target_year": 2030,
       "scope": [
-        "S1",
-        "S3"
+        "S1"
       ],
-      "policy": "Volkswagen ESG targets net zero by 2050, with 2030 interim goals for Scope 1, 2, and 3 emissions reductions. The company aims to cut Scope 1 and 2 emissions by 30% by 2030 and Scope 3 by 50%. The latest sustainability report confirms these targets."
+      "policy": "Volkswagen aims for net zero by 2050, targets 30% CO2 reduction by 2030 (Scope 1, 2, 3), and reports emissions data for Scopes 1, 2, and 3."
     }
   },
   "external_ratings": {
@@ -110,32 +110,32 @@
       "cdp": "a"
     },
     "General Motors": {
-      "msci": "a",
-      "cdp": "a"
+      "msci": null,
+      "cdp": null
     },
     "Ford": {
-      "msci": "a",
-      "cdp": "d"
+      "msci": null,
+      "cdp": null
     },
     "BYD": {
-      "msci": "B",
-      "cdp": "C"
+      "msci": null,
+      "cdp": null
     },
     "Li Auto": {
-      "msci": "A",
-      "cdp": "A"
+      "msci": null,
+      "cdp": null
     },
     "XPeng": {
-      "msci": "a",
-      "cdp": "a"
+      "msci": null,
+      "cdp": null
     },
     "BMW": {
-      "msci": "B",
-      "cdp": "B"
+      "msci": null,
+      "cdp": null
     },
     "Volkswagen": {
-      "msci": "A",
-      "cdp": "a"
+      "msci": null,
+      "cdp": null
     }
   },
   "notes": {
