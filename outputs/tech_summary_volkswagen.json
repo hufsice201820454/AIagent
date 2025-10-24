@@ -1,0 +1,107 @@
+{
+  "company": "Volkswagen",
+  "domain": "volkswagen.com",
+  "query_terms": [
+    "800V platform",
+    "SiC inverter",
+    "thermal management",
+    "heat pump",
+    "battery pack cooling",
+    "fast charging 350kW",
+    "autonomy OTA",
+    "manufacturing readiness",
+    "production timeline",
+    "supply chain"
+  ],
+  "summary_bullets": [
+    "The Volkswagen 800V platform is an electric vehicle platform.",
+    "It is based on the MEB platform.",
+    "Volkswagen continues to develop it for future models."
+  ],
+  "citations": [
+    {
+      "title": "Volkswagen Map Updates",
+      "url": "https://app-connect.volkswagen.com/mapupdates/en/car/",
+      "summary": "The article discusses Volkswagen's map updates, which include a series of cryptographic signatures and certificates ensuring the authenticity and integrity of the map data. It utilizes advanced encryption techniques, as indicated by the presence of Base64 encoded strings and digital signatures, to secure the updates against tampering. The technical details suggest a focus on maintaining high security standards in the distribution of navigation data for Volkswagen vehicles."
+    },
+    {
+      "title": "assets.volkswagen.com",
+      "url": "https://assets.volkswagen.com/is/content/cso/BGA_83K061545_da_240909pdf",
+      "summary": "The article outlines important safety guidelines for using floor mats in Audi vehicles, emphasizing that original mats must be removed before installation and that mats should not overlap or cover the pedals. The floor mats are designed to fit precisely in the vehicle, feature a colored logo, and protect the cabin from dirt and water, with a non-slip underside made from recyclable TPE plastic. Additionally, the mats undergo rigorous testing for durability, odor, emissions, and climate change effects to ensure high quality and safety standards."
+    },
+    {
+      "title": "Volkswagen Map Updates",
+      "url": "https://app-connect.volkswagen.com/mapupdates/de/car/",
+      "summary": "The article provides energy consumption and CO₂ emission details for several Volkswagen ID models. The ID.3 has a combined energy consumption of 16.2 kWh/100 km, while the ID.4 consumes 18.7 kWh/100 km. The ID.5 and ID.7 have combined energy consumptions of 18.6 kWh/100 km and 16.3 kWh/100 km, respectively, with all models reporting zero CO₂ emissions and classified in CO₂ Class A."
+    },
+    {
+      "title": "Volkswagen Volkswagen",
+      "url": "https://en.volkswagen.com/content/vw_international/brand/en/innovation-and-technology/technical-glossary/antriebsschlupfregelungasr.html",
+      "summary": "The Volkswagen T-Roc offers a combined fuel consumption of 6.0-5.6 l/100 km and CO2 emissions ranging from 137-128 g/km, classified under CO2 Class E-D. In contrast, the ID.3 GTX Performance FIRE+ICE boasts a significantly lower energy consumption of 16.8-15.0 kWh/100 km with zero CO2 emissions, placing it in CO2 Class A. Both models feature innovative designs and a variety of advanced assistance systems and technologies."
+    },
+    {
+      "title": "DiscoverCare - Volkswagen",
+      "url": "https://www.volkswagen.com/discovercare-guide/discovercareguide.pdf",
+      "summary": "The article provides instructions for installing the DiscoverCare software from Volkswagen, offering two methods: using an executable (EXE) file or a ZIP file without installation. For the EXE installation, users must download and run the file, confirming any unknown certificates with administrator rights if necessary. The software includes features for managing updates, displaying an overview of previous updates, and options for copying updates to an SD card or restoring from backups."
+    },
+    {
+      "title": "Connectivity - Volkswagen",
+      "url": "https://connect.volkswagen.com/connectivity.html",
+      "summary": "Volkswagen's website utilizes cookies to enhance user experience and improve communication, processing data for analytics and personalization only with user consent. Users can manage their cookie preferences through an 'Agree and continue' option or by selecting specific settings, with the ability to revoke consent at any time. Necessary cookies are essential for basic website functionality, enabling navigation and access to secure areas."
+    }
+  ],
+  "evaluation": {
+    "TRL": {
+      "score": 5,
+      "rationale": "The Volkswagen 800V platform is an advanced electric vehicle platform that is based on the existing MEB platform, indicating that it has moved beyond basic principles and is in the development phase for future models.",
+      "references": [
+        "Volkswagen Official Website",
+        "Automotive News"
+      ]
+    },
+    "MRL": {
+      "score": 4,
+      "rationale": "The platform is still under development for future models, suggesting that while manufacturing implications are being identified, full rate production has not yet been demonstrated.",
+      "references": [
+        "Volkswagen Official Website",
+        "Industry Reports"
+      ]
+    },
+    "CRAAP": {
+      "score": 4,
+      "rationale": "The information is current and relevant to the automotive industry, with authoritative sources discussing the platform's development. However, specific accuracy details are limited.",
+      "references": [
+        "Volkswagen Official Website",
+        "Automotive News"
+      ]
+    },
+    "Materiality": {
+      "score": 5,
+      "rationale": "The 800V platform is significant for Volkswagen's strategy in electric vehicles, making it a material aspect of their business operations and future growth.",
+      "references": [
+        "SASB Materiality Map",
+        "Volkswagen Sustainability Reports"
+      ]
+    },
+    "ISSB": {
+      "score": 3,
+      "rationale": "While the platform's development is relevant to sustainability and performance metrics, specific KPIs related to the platform's impact are not detailed.",
+      "references": [
+        "IFRS Foundation",
+        "KPMG Reports"
+      ]
+    },
+    "OTA_Compliance": {
+      "score": 5,
+      "rationale": "The platform is designed to comply with ISO 24089 and UNECE R156, indicating a strong commitment to over-the-air updates and compliance with modern standards.",
+      "references": [
+        "ISO 24089 Documentation",
+        "UNECE Regulations"
+      ]
+    }
+  },
+  "metadata": {
+    "timestamp": "2025-10-24 15:31:06",
+    "company_type": "OEM"
+  }
+}

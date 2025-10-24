@@ -1,0 +1,210 @@
+{
+  "oem_charts": {
+    "TSLA": "C:\\workspace\\evagent\\outputs\\stock_OEM_TSLA_20251024_153005.png",
+    "RIVN": "C:\\workspace\\evagent\\outputs\\stock_OEM_RIVN_20251024_153007.png",
+    "GM": "C:\\workspace\\evagent\\outputs\\stock_OEM_GM_20251024_153008.png",
+    "F": "C:\\workspace\\evagent\\outputs\\stock_OEM_F_20251024_153010.png",
+    "BYDDF": "C:\\workspace\\evagent\\outputs\\stock_OEM_BYDDF_20251024_153011.png",
+    "LI": "C:\\workspace\\evagent\\outputs\\stock_OEM_LI_20251024_153013.png",
+    "XPEV": "C:\\workspace\\evagent\\outputs\\stock_OEM_XPEV_20251024_153014.png",
+    "VWAGY": "C:\\workspace\\evagent\\outputs\\stock_OEM_VWAGY_20251024_153018.png"
+  },
+  "supplier_charts": {
+    "Battery": "C:\\workspace\\evagent\\outputs\\stock_Battery_merged_20251024_153033.png",
+    "HVAC": "C:\\workspace\\evagent\\outputs\\stock_HVAC_merged_20251024_153034.png"
+  },
+  "oem_data": [
+    {
+      "ticker": "TSLA",
+      "current": 448.9800109863281,
+      "prev_close": 422.38,
+      "market_cap": 1493226326138.2007,
+      "pe": 311.79166,
+      "change_90d_pct": 47.06191580026929,
+      "company_name": "Tesla",
+      "category": "OEM"
+    },
+    {
+      "ticker": "RIVN",
+      "current": 13.09000015258789,
+      "prev_close": 12.93,
+      "market_cap": 15883851441.505337,
+      "pe": -4.7773724,
+      "change_90d_pct": -5.282196514879252,
+      "company_name": "Rivian",
+      "category": "OEM"
+    },
+    {
+      "ticker": "GM",
+      "current": 66.8499984741211,
+      "prev_close": 67.26,
+      "market_cap": 62790892838.82186,
+      "pe": 12.757634,
+      "change_90d_pct": 28.05288915600584,
+      "company_name": "General Motors",
+      "category": "OEM"
+    },
+    {
+      "ticker": "F",
+      "current": 12.34000015258789,
+      "prev_close": 12.42,
+      "market_cap": 49111476672.258484,
+      "pe": 15.820514,
+      "change_90d_pct": 11.063160909738482,
+      "company_name": "Ford",
+      "category": "OEM"
+    },
+    {
+      "ticker": "BYDDF",
+      "current": 13.489999771118164,
+      "prev_close": 13.25,
+      "market_cap": 128296357509.72414,
+      "pe": 12.847619,
+      "change_90d_pct": -19.462687933622902,
+      "company_name": "BYD",
+      "category": "OEM"
+    },
+    {
+      "ticker": "LI",
+      "current": 22.229999542236328,
+      "prev_close": 21.82,
+      "market_cap": 22659975950.252186,
+      "pe": 20.7757,
+      "change_90d_pct": -24.87326993037501,
+      "company_name": "Li Auto",
+      "category": "OEM"
+    },
+    {
+      "ticker": "XPEV",
+      "current": 21.469999313354492,
+      "prev_close": 21.2798,
+      "market_cap": 20147366735.804436,
+      "pe": -47.71111,
+      "change_90d_pct": 12.232097518263139,
+      "company_name": "XPeng",
+      "category": "OEM"
+    },
+    {
+      "ticker": "VWAGY",
+      "current": 10.399999618530273,
+      "prev_close": 10.40999984741211,
+      "market_cap": 52163486461.05465,
+      "pe": 5.3608246,
+      "change_90d_pct": -10.11236047670199,
+      "company_name": "Volkswagen",
+      "category": "OEM"
+    }
+  ],
+  "supplier_data": [
+    {
+      "ticker": "TSM",
+      "current": 290.7300109863281,
+      "prev_close": 288.4,
+      "market_cap": 1507877919006.7646,
+      "pe": 32.054028,
+      "change_90d_pct": 20.3352664079662,
+      "company_name": "TSMC",
+      "category": "Battery"
+    },
+    {
+      "ticker": "300750.SZ",
+      "current": 384.489990234375,
+      "prev_close": 376.45001220703125,
+      "market_cap": 1772553774761.6938,
+      "pe": 26.66366,
+      "change_90d_pct": 35.304618196009734,
+      "company_name": "CATL",
+      "category": "Battery"
+    },
+    {
+      "ticker": "006400.KS",
+      "current": 294000.0,
+      "prev_close": 258000.0,
+      "market_cap": 22975173900000.0,
+      "pe": 28.143898,
+      "change_90d_pct": 54.49290593799264,
+      "company_name": "Samsung SDI",
+      "category": "Battery"
+    },
+    {
+      "ticker": "373220.KS",
+      "current": 493500.0,
+      "prev_close": 447500.0,
+      "market_cap": 115479000000000.0,
+      "pe": 81.96516,
+      "change_90d_pct": 34.10326086956522,
+      "company_name": "LG Energy Solution",
+      "category": "Battery"
+    },
+    {
+      "ticker": "6902.T",
+      "current": 2281.5,
+      "prev_close": 2251.5,
+      "market_cap": 6169239078912.0,
+      "pe": 15.720388,
+      "change_90d_pct": 8.108135622435764,
+      "company_name": "DENSO",
+      "category": "HVAC"
+    },
+    {
+      "ticker": "FR.PA",
+      "current": 10.96500015258789,
+      "prev_close": 10.085000038146973,
+      "market_cap": 2652986129.0587006,
+      "pe": 21.93,
+      "change_90d_pct": 5.890880128612957,
+      "company_name": "Valeo",
+      "category": "HVAC"
+    },
+    {
+      "ticker": "THRM",
+      "current": 37.15999984741211,
+      "prev_close": 35.03,
+      "market_cap": 1134314495.022232,
+      "pe": 37.535355,
+      "change_90d_pct": 13.05141787323251,
+      "company_name": "Gentherm",
+      "category": "HVAC"
+    },
+    {
+      "ticker": "MOD",
+      "current": 152.39999389648438,
+      "prev_close": 140.2887,
+      "market_cap": 7999510579.225067,
+      "pe": 43.66762,
+      "change_90d_pct": 55.71675653376512,
+      "company_name": "Modine",
+      "category": "HVAC"
+    },
+    {
+      "ticker": "DAN",
+      "current": 19.850000381469727,
+      "prev_close": 20.02,
+      "market_cap": 2603399665.0811405,
+      "pe": 99.25,
+      "change_90d_pct": 22.10166670949035,
+      "company_name": "Dana",
+      "category": "HVAC"
+    },
+    {
+      "ticker": "018880.KS",
+      "current": 3960.0,
+      "prev_close": 3860.0,
+      "market_cap": 2687378688720.0,
+      "pe": 39.965336,
+      "change_90d_pct": 20.364741641337385,
+      "company_name": "Hanon Systems",
+      "category": "HVAC"
+    }
+  ],
+  "trend_indicators": {
+    "oem_trend": 1,
+    "supplier_trend": 1,
+    "correlation_score": 1.0,
+    "oem_avg_change_pct": 4.83,
+    "supplier_avg_change_pct": 26.95
+  },
+  "llm_evaluation": {
+    "llm_evaluation": "```json\n{\n  \"market_health\": \"Growth\",\n  \"market_summary\": \"The electric vehicle (EV) market is currently in a growth phase, driven by significant upward trends in both OEM and supplier segments. The average change for OEMs is 4.83%, while suppliers show a robust average increase of 26.95%, indicating strong demand and investment in the sector.\",\n  \"oem_supplier_dynamics\": \"The perfect correlation score of 1.0 suggests a strong interdependence between OEMs and suppliers, indicating that growth in vehicle production is closely tied to advancements and demand in battery and HVAC technologies.\",\n  \"key_insights\": [\n    \"Tesla continues to dominate the market with a substantial 90-day increase of 47.06%, reflecting strong consumer demand and brand loyalty.\",\n    \"Suppliers like Samsung SDI and Modine show exceptional growth rates, indicating a robust supply chain that supports the expanding EV market.\",\n    \"Some OEMs, such as Rivian and BYD, are experiencing declines, which may signal challenges in scaling production or market acceptance.\"\n  ],\n  \"outlook\": \"The EV market is expected to continue its upward trajectory as technological advancements and consumer adoption increase, although certain manufacturers may face hurdles that could impact their growth.\"\n}\n```"
+  }
+}

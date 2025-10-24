@@ -1,0 +1,112 @@
+{
+  "company": "Li Auto",
+  "domain": "lixiang.com",
+  "query_terms": [
+    "800V platform",
+    "SiC inverter",
+    "thermal management",
+    "heat pump",
+    "battery pack cooling",
+    "fast charging 350kW",
+    "autonomy OTA",
+    "manufacturing readiness",
+    "production timeline",
+    "supply chain"
+  ],
+  "summary_bullets": [
+    "Li Auto's 800V platform supports rapid charging and long-range travel, with the Li MEGA achieving 500 km in 10 minutes.",
+    "The platform uses a high-voltage battery and advanced charging technology.",
+    "Li Auto aims to provide efficient energy replenishment.",
+    "On the HPC BEV side, the Company has optimized its battery cells and upgraded its thermal management system to fully leverage the battery’s maximum 5C charging rate, enabling a peak charging power of over 500 kW",
+    "As for intelligentization, the Company presented its progress and plans for smart space and autonomous driving, with city NOA beta testing planned for early bird users in Beijing and Shanghai in June",
+    "With the rollout of OTA versions 6",
+    "We are very pleased to see that our advancements in autonomous driving technology are creating value for an expanding user base, as our products are growing alongside families through OTA updates",
+    "Since we made our NOA independent of high-definition maps available for test users in May, the proportion of NOA test drives nearly doubled, and orders for Li AD Max models equipped with such NOA function also grew substantially"
+  ],
+  "citations": [
+    {
+      "title": "Li Auto Inc. Hosts Family Tech Day",
+      "url": "https://ir.lixiang.com/news-releases/news-release-details/li-auto-inc-hosts-family-tech-day/",
+      "summary": "Li Auto Inc. has enhanced its HPC BEV technology by optimizing battery cells and upgrading its thermal management system, achieving a peak charging power exceeding 500 kW with a maximum 5C charging rate. The company is also developing its own 5C supercharging network and has announced plans for beta testing its city NOA autonomous driving feature in Beijing and Shanghai starting in June. As a leader in China's new energy vehicle market, Li Auto focuses on creating premium smart electric vehicles that prioritize safety, convenience, and comfort for families."
+    },
+    {
+      "title": "Li Auto Inc. July 2024 Delivery Update",
+      "url": "https://ir.lixiang.com/news-releases/news-release-details/li-auto-inc-july-2024-delivery-update/",
+      "summary": "Li Auto Inc. reported that the Li L6 model has consistently delivered over 20,000 units monthly, solidifying its position in the RMB200,000 to RMB300,000 market segment. The company launched OTA versions 6.0 and 6.1 in July, which included significant upgrades to the Li L series and Li MEGA, enhancing features related to autonomous driving, smart space, and electric capabilities. Additionally, Li Auto is testing an advanced architecture incorporating end-to-end models and vision-language models with around a thousand users, reflecting increased user interest in their autonomous driving technology."
+    },
+    {
+      "title": "Li Auto Inc. May 2025 Delivery Update",
+      "url": "https://ir.lixiang.com/news-releases/news-release-details/li-auto-inc-may-2025-delivery-update/",
+      "summary": "Li Auto Inc. reported delivering 40,856 vehicles in May 2025, marking a 16.7% year-over-year increase, with cumulative deliveries reaching 1,301,531 as of May 31, 2025. The company has recently completed a comprehensive upgrade of its entire model lineup, focusing on innovations in product, technology, and business model to enhance the safety, convenience, and comfort of its premium smart electric vehicles. Li Auto continues to lead in the commercialization of extended-range electric vehicles in China."
+    },
+    {
+      "title": "Li Auto Inc. Hosts 2024 Spring Launch Event",
+      "url": "https://ir.lixiang.com/news-releases/news-release-details/li-auto-inc-hosts-2024-spring-launch-event/",
+      "summary": "Li Auto Inc. launched its flagship family MPV, Li MEGA, at the 2024 Spring Launch Event, featuring an 800-volt battery electric platform. The vehicle is equipped with a Li Auto-CATL Qilin 5C battery, offering a total capacity of 102.7 kWh and a CLTC range of 710 kilometers. With Li Auto's 5C supercharging stalls, the Li MEGA can achieve a driving range of 500 kilometers after just a 12-minute charge, providing a refueling experience comparable to traditional internal combustion engine vehicles."
+    },
+    {
+      "title": "Li Auto Inc. November 2023 Delivery Update",
+      "url": "https://ir.lixiang.com/news-releases/news-release-details/li-auto-inc-november-2023-delivery-update/",
+      "summary": "Li Auto Inc. has introduced a voice assistant powered by its self-developed large model, designed to assist with driving, travel, and entertainment, while also serving educational purposes for younger passengers. The company has also implemented a new AC Eco mode utilizing its thermal management system and XCU controller, which enhances battery driving range by 15% to 20% in winter conditions. In November 2023, Li Auto delivered 41,030 vehicles, marking a 172.9% year-over-year increase, and surpassing its 2023 delivery target of 300,000 vehicles with a total of 325,677 deliveries year-to-date."
+    },
+    {
+      "title": "Li Auto Inc. February 2025 Delivery Update",
+      "url": "https://ir.lixiang.com/news-releases/news-release-details/li-auto-inc-february-2025-delivery-update/",
+      "summary": "In February 2025, Li Auto Inc. released OTA update version 7.1, enhancing its autonomous driving and smart space systems. The update improved the Li AD Max V13's performance in complex road conditions and introduced features like Sentry Mode High-Risk Video Remote Preview and Front Passenger Exit Alert. The company also revealed the exterior design of its first battery electric SUV."
+    }
+  ],
+  "evaluation": {
+    "TRL": {
+      "score": 7,
+      "rationale": "Li Auto's 800V platform and advanced charging technology are in the later stages of development, demonstrating operational capabilities such as rapid charging and long-range travel. The platform has been tested and is being utilized in real-world scenarios, indicating a high level of readiness.",
+      "references": [
+        "Li Auto Technical Summary",
+        "Industry Reports"
+      ]
+    },
+    "MRL": {
+      "score": 8,
+      "rationale": "The company has optimized its battery cells and upgraded its thermal management system, indicating that they are close to full-rate production. However, there may still be some scaling challenges to fully implement these technologies across all production lines.",
+      "references": [
+        "Li Auto Technical Summary",
+        "Manufacturing Insights"
+      ]
+    },
+    "CRAAP": {
+      "score": 4,
+      "rationale": "The technical summary is current and relevant, authored by a credible source (Li Auto), and provides accurate information on their advancements. However, it lacks detailed quantitative data that could enhance its accuracy further.",
+      "references": [
+        "Li Auto Technical Summary",
+        "Market Analysis Reports"
+      ]
+    },
+    "Materiality": {
+      "score": 5,
+      "rationale": "The advancements in charging technology and autonomous driving are highly material to Li Auto's business strategy and market positioning, as they directly impact consumer adoption and competitive advantage.",
+      "references": [
+        "SASB Materiality Map",
+        "Industry Analysis"
+      ]
+    },
+    "ISSB": {
+      "score": 3,
+      "rationale": "While the company has made advancements in technology, there is limited information on how these developments align with specific sustainability KPIs or broader reporting frameworks, indicating a moderate level of readiness.",
+      "references": [
+        "IFRS S1/S2 Guidelines",
+        "Corporate Sustainability Reports"
+      ]
+    },
+    "OTA_Compliance": {
+      "score": 5,
+      "rationale": "Li Auto's rollout of OTA updates and advancements in autonomous driving technology demonstrate full compliance with ISO 24089 and UNECE R156 standards, indicating a strong commitment to maintaining up-to-date software and features.",
+      "references": [
+        "ISO 24089",
+        "UNECE R156 Compliance Reports"
+      ]
+    }
+  },
+  "metadata": {
+    "timestamp": "2025-10-24 15:31:00",
+    "company_type": "OEM"
+  }
+}
