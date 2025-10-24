@@ -346,9 +346,9 @@ PS C:\workspace\evagent> python app.py
   - XPeng
   - BMW
   - Volkswagen
-================================================================================
+
 EV Market Analysis Pipeline
-================================================================================
+
 Target OEMs (9):
   1. Tesla
   2. Rivian
@@ -363,11 +363,10 @@ Target OEMs (9):
 ESG Regions: KR, CN, JP, EU, US
 Output: C:\workspace\evagent\outputs
 Timestamp: 2025-10-24 15:30:00
-================================================================================
 
-================================================================================
+
 [STEP 1/2] Running SupervisorAgent (4 agents in parallel)
-================================================================================
+
 Fetching data for 9 OEMs, 5 Battery, 6 HVAC suppliers...
   Fetching Tesla (TSLA)...
   Fetching Rivian (RIVN)...
@@ -420,15 +419,8 @@ Running LLM evaluation...
     ✓ BMW: TRL=7, MRL=8, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
     ✓ Volkswagen: TRL=5, MRL=4, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
 
-================================================================================
 [STEP 2/2] Running ReportWriterAgent (PDF generation)
-================================================================================
-
-============================================================
 총 9개 OEM 보고서 생성
-============================================================
-
-
 [1/9] Tesla
 
 [Images] 수집:
@@ -653,9 +645,8 @@ Running LLM evaluation...
 [PDF] ✓ playwright: report_report_001_XPeng.pdf
 [IMG] batch converter unavailable (imgkit/wkhtmltoimage 미설치 가능)
 
-============================================================
 보고서 생성 완료
-============================================================
+
 성공: 9개 / 실패: 0개
 
 생성된 보고서:
@@ -668,6 +659,6 @@ Running LLM evaluation...
   • XPeng: report_report_001_XPeng.pdf
   • BMW: report_report_001_BMW.pdf
   • Volkswagen: report_report_001_Volkswagen.pdf
-============================================================
+
 
 
