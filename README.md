@@ -1,20 +1,18 @@
-# AIagent
+# AI Agent
 
-본 프로젝트는 전기차(EV) 시장 분석을 하는 에이전트를 설계하고 구현한 실습 프로젝트입니다.
+본 프로젝트는 전기차(EV) 시장 분석 다중 에이전트 시스템을 설계·구현하는 실습 프로젝트입니다. 현재와 미래 관점을 통합해 전기차 시장 전반과 OEM별 동향 보고서를 자동 생성합니다.
 
-	크게 현재와 미래를 토대로 전반적인 전기차 시장 분석과 각 완성차 기업이 전기차 시장에서 어떻게 사업을 전개하고 있는지 리포트를 생성하려 합니다.
+	1) 현재 → 완성차 공장 주변 협력사 공장 수를 기준(66km/140km)으로 점수화
+	2) 미래 → 국가별 ESG 정책과 기업 ESG 목표를 수집·요약
+	3) 기술 → 완성차 10~20문장, 협력사 5~10문장으로 차별화 기술 요약
+	4) 주식 → 시장 지표/차트와 1~3의 결과를 병합해 최종 리포트 생성
 
-	1) 현재 -> 전기 자동차 공장의 위치를 기반 그 주변의 협력사 공장의 수를 count 하여 점수화 하려합니다. -> 도메인적 지식으로 66km, 140km 를 평가기준으로 설정합니다.
-	2) 미래 -> ESG 정책을 국가 별로 검색하고 / 각 기업의 목표를 (url)을 입력하여 Agent가 기업별 ESG 목표/년도를 찾게 할 생각입니다.
-	3) 기업의 차별화된 전기차 기술을 검색하려 합니다 / 완성차의 경우 10 ~ 20문장과 리포트 시장에서의 적극성을 검색합니다
-	4) 주식 리포트와 1,2,3의 결과를 병합하여 어떤 기업이 전기차 시장에서 가장 적극적인지를 확인하는 보고서를 출력하려 합니다. 
-
-## Core Agents (3)
-	Value Chain Agent: 공장 입지/가동 현황 데이터 분석 및 지리적 클러스터링
-	TechSearch Agent: 완성차·배터리·공조 회사에서의 전기차 관련 차별화된 기술을 정리합니다 / 완성차 10 ~ 20 / 협력사 5 ~ 10
-	ESG Agent: 각국 ESG/탄소 규제와 기업 ESG 정책·리스크 요약
-	Stock Agent: 완성차·배터리·공조 관련 상장사 주가 흐름/지표 분석 및 차트 생성
-	Supervisor Agent: 3개 결과를 통합하여 최종 보고서 작성
+## Core Agents
+	Value Chain Agent: 공장 입지/가동 현황 분석, 지리적 클러스터링
+	TechSearch Agent: 완성차·배터리·공조의 차별화 기술 검색/요약
+	ESG Agent: 각국 ESG/탄소 규제 및 기업 ESG 정책 요약
+	Stock Agent: 상장사 주가 흐름/지표 분석 및 차트 생성
+	Supervisor Agent: 하위 에이전트 결과 통합 및 보고서 생성
 
 <img width="701" height="475" alt="image" src="https://github.com/user-attachments/assets/2e353a14-72b0-4ad6-92fb-4d31bc057be9" />
 <img width="713" height="315" alt="image" src="https://github.com/user-attachments/assets/87b0efb2-6024-4543-a99c-d7ab5ff912b6" />
@@ -24,126 +22,68 @@
 Objective: EV 관련 시장(OEM, 배터리, 공조) 분석
 대상: 기업 분석, 주가 분석, 완성차 주변 공장 수/가동 현황 분석
 목적: EV 시장의 생산(현상), 시장 반응(주가/재무), 규제/ESG(정책) 축을 통합 분석·시각화하여 투자 인사이트와 트렌드 리포트를 자동 생성한다.
-최종 산출물: EV Trend Report (지도 + 주가 차트 + ESG 요약 포함)
+최종 산출물: EV Trend Report (지도 + 주가 차트 + ESG 요약 포함, HTML/PDF)
 
-## Method: AI Agent + Advanced RAG
+## Method: AI Agent
 
 ## Tools
-TechSearchAgent 툴
+- 공통/검색: `tavily_tool`
+- 주가/시각화: `stock_analysis`, `create_stock_chart`, `visualization_tool`
+- ESG/정책: `GovESGSearch`, `CorpESGSearch`
+- 기술 요약: 검색/파싱/중복제거/랭킹/요약·인용 유틸 일체(TechSearchAgent 내부)
+- 보고서 출력: ReportWriterAgent 내 HTML→PDF 변환(Playwright/Chromium)
 
-	TechDomainResolver
-		입력: { "company": str }
-		출력: { "company": str, "domain": str | null }
-		목적: OEM 회사 도메인 해석(화이트리스트 우선, 없으면 검색 추정)
-	TechQueryBuilder
-		입력: { "company": str, "company_type": "OEM" }
-		출력: { "company": str, "query_terms": str[] }
-		목적: 기술 키워드 쿼리 텀 생성
-	TechSearch
-		입력: { "company": str, "domain": str | null, "query_terms": str[] }
-		출력: { "hits": [{ "title": str, "url": str, "content": str }] , "answer": str }
-		목적: Tavily 검색(도메인 가중), 1차 문서 수집
-	TechDeduperRanker
-		입력: { "hits": Hit[], "domain": str | null }
-		출력: { "hits": Hit[] } // 최대 12개로 정리
-		목적: URL 중복 제거 + 도메인/콘텐츠 기반 랭킹
-	TechSummarizer
-		입력: { "company": str, "answer": str | null, "hits": Hit[] }
-		출력: { "bullets": str[], "citations": [{ "title": str, "url": str, "content": str }] }
-		목적: 경량 추출 요약(키워드 큐로 문장 선택)
-	LLMEvaluator
-		입력: { "company": str, "bullets": str[], "citations": [{ "title": str, "url": str, "content": str }] }
-		출력:
-			{ "evaluation": { TRL|MRL|CRAAP|Materiality|ISSB|OTA_Compliance: { "score": number, "rationale": str, "references": str[] } },
-			"citation_summaries": [{ "title": str, "url": str, "summary": str }] }
-		목적: 6축(TRL/MRL/CRAAP/Materiality/ISSB/OTA) LLM 평가 + 인용 요약
-	파일: evagent/agents/TechSearchAgent.py
 
-ESGAgent 툴
 
-	GovESGSearch
-		입력: { "regions": str[] }
-		출력: { [region]: { "policy": str, "carbon_neutral": int|null } }
-		목적: 지역별 정부 탄소중립/정책 요약(Tavily 사용 시 답변 활용)
-	CorpESGSearch
-		입력: { "oems": str[] }
-		출력: { [company]: { "target_year": int|null, "scope": ["S1","S2","S3"], "policy": str } }
-		목적: OEM 기업 ESG 목표/스코프 요약
-	ExternalRatings
-		입력: { "oems": str[] }
-		출력: { [company]: { "msci": str|null, "cdp": str|null } }
-		목적: MSCI/CDP 등급 힌트 추출(정규식 매칭)
-	파일: evagent/agents/ESGAgent.py
-
-ValueChainAgent 툴
-
-	visualization_tool
-		입력: { "oem_df": DataFrame|json, "supplier_df": DataFrame|json, "out_dir": str }
-		출력: str // 저장된 PNG 경로
-		목적: OEM/배터리/HVAC 위치를 plotly scatter_geo로 시각화(PNG)
-파일: evagent/agents/ValueChainAgent.py
+각 Tool의 주 사용 에이전트
+	Value Chain Agent: visualization_tool, (보조로 tavily_tool)
+	Stock Agent: stock_analysis, create_stock_chart
+	ESG Agent: GovESGSearch, CorpESGSearch, (보조로 tavily_tool)
 	
 ## State
-Value Chain
 
-타입: VCState — evagent/agents/ValueChainAgent.py:338
-필드
-data_dir: str
-out_dir: str
-oem_df: Optional[pd.DataFrame]
-sup_battery_df: Optional[pd.DataFrame]
-sup_hvac_df: Optional[pd.DataFrame]
-supplier_df: Optional[pd.DataFrame]
-counts_json: Optional[Dict[str, Dict[str, int]]]
-jit_analysis: Optional[Dict[str, Any]]
-jit_evaluation: Optional[Dict[str, Any]]
-map_path: Optional[str]
-thresholds_km: Dict[str, float] // {"near": 66, "region": 140}
-llm: Optional[Any]
-Stock
+1) Global State
+	pg_conn: PostgreSQL 연결
+	data_path: 산출물 파일 경로 (str)
+	messages: 노드(에이전트)별 응답 누적
+	final_report: 최종 리포트 파일명 또는 경로
 
-별도 TypedDict 없음. 반환 구조 — evagent/agents/StockAnalyzerAgent.py:478
-결과 키
-oem_charts: Dict[str, str]
-supplier_charts: Dict[str, str]
-oem_data: List[Dict[str, Any]] // history 제외 직렬화
-supplier_data: List[Dict[str, Any]]
-trend_indicators: Dict[str, Any] // oem_trend, supplier_trend, correlation_score 등
-llm_evaluation: Dict[str, Any]
-ESG
+	
+2) Value Chain Agent State
+	table(Data): PostgreSQL에서 가져온 공장/설비 데이터프레임 (DataFrame)
+	list_result: 
+	JIT 분석 결과 JIT 평가 결과 (List[Dict[str, float]] -> Json리턴)
+    JIT 분석 결과 시각화 그래프 - map_oem_suppliers.png
+	
 
-타입: ESGState — evagent/agents/ESGAgent.py:189
-필드
-regions: List[str]
-oems: List[str]
-gov_esg_findings: Optional[Dict[str, Any]]
-corp_esg_findings: Optional[Dict[str, Any]]
-external_ratings: Optional[Dict[str, Any]]
-out_dir: str
-TechSearch
 
-타입: TechState — evagent/agents/TechSearchAgent.py:287
-필드
-company: str
-company_type: str
-domain: Optional[str]
-query_terms: Optional[List[str]]
-raw_hits: Optional[List[Dict[str, str]]]
-ranked_hits: Optional[List[Dict[str, str]]]
-answer: Optional[str]
-summary_bullets: Optional[List[str]]
-citations: Optional[List[Dict[str, str]]]
-evaluation: Optional[Dict[str, Any]] // TRL/MRL/CRAAP/Materiality/ISSB/OTA_Compliance
-citation_summaries: Optional[List[Dict[str, str]]]
-out_dir: str
+4) Stock Agent State
+	stock_chart_image: 생성된 주가 차트 이미지 경로 (str)
+    stock_analysis_json 및 각 회사 주식 차트 return
+
+
+5) ESG Agent State
+	gov_esg_findings: 국가/지역 ESG 정책 검색 결과 요약
+	corp_esg_findings: 기업 ESG 정책/보고서 요약
+
+
+6) TechSearch Agent State
+   query: str — 사용자가 던진 검색 질의(예: “EV 배터리 팩 공급거점 2024 생산량”)
+   constraints: dict — 필터(언어, 국가/도메인, 날짜 범위, 파일형식 포함/제외)
+   entities: list[str] — 회사/제품/지역 키워드 토큰화 결과
+   results: list[dict] — 1차 검색 결과(타이틀, URL, 스니펫, 날짜, 출처 도메인)
+   docs: list[dict] — 본문 추출/요약된 문서 블록(본문텍스트, 핵심문장, 추출표/수치)
+   citations: list[dict] — 인용 메타(문장 ↔ URL, 발행일, 접근일)
+   dedup_index: set — URL/문서 해시로 중복 제거용
+   cache: dict — 동일/유사 질의 캐시(결과 재사용)
+   output_json: dict — 최종 반환(JSON): { “summary”, “key_facts[]”, “links[]”, “citations[]” }
 
 
 ## Tech Stack
 Category	Details
-Framework	LangGraph, Python
+Framework	LangGraph, LangChain, Python
 LLM	        GPT-4o-mini via OpenAI API
-Retrieval	Chroma
-Embedding	OpenAI
+Embedding	OpenAI, multilingual-e5-large
 
 ## Agents
 	#Supervisor Agent
@@ -225,6 +165,12 @@ Embedding	OpenAI
 	Materiality	중요도(재무·비재무 영향)	기술이 산업·지속가능성·재무성과 등에 미치는 실질적 영향 정도 평가.
 	ISSB Alignment	국제 지속가능 공시 연계성	IFRS S1/S2 등 국제 기준(ISSB, IFRS)과의 정합성 평가.
 	OTA_Compliance	OTA(Over-the-Air) 규제 준수	ISO 24089, UNECE R156 등 차량 OTA 업데이트 관련 표준 및 규제 준수 여부 평가.
+
+8. 종합 결과 산정
+   1) Value-Chain : 30
+   2) ESG : 30
+   3) TechSearch : 30
+   4) StockAnalyer: 10
    
 
 ## 산출 보고서 양식
@@ -270,7 +216,7 @@ Embedding	OpenAI
 	6. Appendix
 
 
-## 디렉토리 구조
+## 디렉터리 구조(요약)
 
 
 ├── data/                  # PDF 문서
@@ -285,13 +231,13 @@ Embedding	OpenAI
 ├────── SupervisorAgent.py
 
 
-├────── ValuechainAgent.py
+├────── ValueChainAgent.py
 
 
 ├────── StockAnalyzerAgent.py
 
 
-├────── EsgAgent.py
+├────── ESGAgent.py
 
 
 ├────── TechSearchAgent.py
@@ -303,7 +249,7 @@ Embedding	OpenAI
 ├────── Prompt.py
 
 
-├── outputs/			   # 결과 값 산출
+├── outputs/               # 결과 산출물(HTML/PDF/이미지/JSON)
 
 
 ├── db/
@@ -319,11 +265,48 @@ Embedding	OpenAI
 
 
 └── .env
+
+## 변경사항
+# Part 1 (25.10.23)
+ 1. PDF Adorby 문제로 보고서 생성 중간에 완료되어버리는 문제 발생
+ 2. 이에 따라 보고서를 기업별로 생성하는 로직으로 변경
+ 3. 또한 보고서 생성시 html을 먼저 생성하고 html을 PDF로 변환하는 로직으로 변경
+ 4. StockAnalyerAgent에서 주식 분석 및 기업 서치를 동시에 진행하였으나, 하나의 Agent가 하나의 역할을 수행하게 하기 위해 StockAnalyzer와 TechSearch Agent로 분할
+ 5. Supervisor이후 ReportWriterAgent가 작동되도록 ReportWriterAgent 추가
+ 6. Supervisor의 정의에 따라, Supervisor가 하위 Agent에 명령을 하달하고 그를 기반으로 수행하는 로직으로 변경
+ 7. RAG 파이프라인 계획과 DB 연동 계획 제거
+
+## 에러 상황
+1. 보고서에 reference가 들어가지를 않음 -> 현재 Json타입에는 제대로 reference가 들어가 있음
+2. 그 외 모든 에러는 해결되었습니다.
+3. 다만 아키텍처 수정이 안된 상황입니다.
+
+## 확장 방향
+1. 영업팀을 위한 실시간 대시보드로 Agent의 결과를 연동할 계획입니다.
+2. 대시보드 예정상황은 다음과 같습니다.
+<img width="259" height="282" alt="image" src="https://github.com/user-attachments/assets/3c2deec0-2345-4632-8593-609cd65ac73d" />
+
+
 		
-Architecture
+## Architecture
 <img width="2505" height="1640" alt="Mermaid Chart - Create complex, visual diagrams with text -2025-10-21-083600" src="https://github.com/user-attachments/assets/20c05d80-e84b-47f0-8876-abc42c558a4a" />
 
+
+## 보고서 생성(HTML/PDF)
+- HTML 생성: `ReportWriterAgent`가 OEM별 본문/표/이미지를 합쳐 HTML 생성
+- PDF 생성: Playwright 기반으로 HTML을 A4 PDF로 직접 렌더링
+  - 필수 설치
+    - `pip install playwright`
+    - `playwright install chromium`
+- 배치 변환: 에이전트 실행 시 `outputs` 폴더의 남은 HTML도 일괄 PDF로 변환
+
+## 실행 예시
+- 앱 실행: `python evagent/app.py`
+
+
+
 ## 실행결과
+PS C:\workspace\evagent> python app.py
 [Config] Loaded 9 OEMs from whitelist:
   - Tesla
   - Rivian
@@ -350,7 +333,7 @@ Target OEMs (9):
 
 ESG Regions: KR, CN, JP, EU, US
 Output: C:\workspace\evagent\outputs
-Timestamp: 2025-10-23 15:02:17
+Timestamp: 2025-10-24 15:30:00
 ================================================================================
 
 ================================================================================
@@ -398,78 +381,264 @@ Running LLM evaluation...
     ✓ esg
 
   Tech Analysis (9 companies):
-    ✓ Tesla: TRL=8, MRL=9, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
+    ✓ Tesla: TRL=7, MRL=8, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
     ✓ Rivian: TRL=7, MRL=8, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
     ✓ General Motors: TRL=7, MRL=6, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
     ✓ Ford: TRL=7, MRL=6, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
     ✓ BYD: TRL=7, MRL=8, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
     ✓ Li Auto: TRL=7, MRL=8, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
-    ✓ XPeng: TRL=7, MRL=8, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
+    ✓ XPeng: TRL=7, MRL=6, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
     ✓ BMW: TRL=7, MRL=8, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
-    ✓ Volkswagen: TRL=5, MRL=4, CRAAP=4, Materiality=3, ISSB=3, OTA_Compliance=5
+    ✓ Volkswagen: TRL=5, MRL=4, CRAAP=4, Materiality=5, ISSB=3, OTA_Compliance=5
 
 ================================================================================
 [STEP 2/2] Running ReportWriterAgent (PDF generation)
 ================================================================================
 
-[Images] 수집 완료:
-  - 지도: 있음
-  - 배터리: 있음
-  - HVAC: 있음
+============================================================
+총 9개 OEM 보고서 생성
+============================================================
+
+
+[1/9] Tesla
+
+[Images] 수집:
   - OEM 차트: 8개
+    • BYD
+    • Ford
+    • General Motors
+    • Li Auto
+    • Rivian
+    • Tesla
+    • Volkswagen
+    • XPeng
+[Prompt] Tesla (40680 chars)
+[LLM] 호출 중...
+[LLM] 완료 (4103 chars)
+[INFO] 회사 섹션: Tesla
+[HTML] ✓ report_report_001_Tesla.html
+[PDF] ✓ playwright: report_report_001_Tesla.pdf
+[PDF] ✓ playwright: report_report_001_Tesla.pdf
+[IMG] batch converter unavailable (imgkit/wkhtmltoimage 미설치 가능)
 
-[Prompt] 구성 완료 (39691 chars)
+[2/9] Rivian
 
-[LLM] 호출 중... (모델: gpt-4o-mini)
-[LLM] 응답 수신 (10620 chars)
+[Images] 수집:
+  - OEM 차트: 8개
+    • BYD
+    • Ford
+    • General Motors
+    • Li Auto
+    • Rivian
+    • Tesla
+    • Volkswagen
+    • XPeng
+[Prompt] Rivian (40702 chars)
+[LLM] 호출 중...
+[LLM] 완료 (3841 chars)
+[INFO] 회사 섹션: Rivian
+[HTML] ✓ report_report_001_Rivian.html
+[PDF] ✓ playwright: report_report_001_Rivian.pdf
+[PDF] ✓ playwright: report_report_001_Rivian.pdf
+[PDF] ✓ playwright: report_report_001_Tesla.pdf
+[IMG] batch converter unavailable (imgkit/wkhtmltoimage 미설치 가능)
 
-[PDF] 렌더링 시작...
-[PDF] 이미지 추가 성공: [그림] 글로벌 OEM & 공급사 위치
-[PDF] 이미지 추가 성공: [그림] Tesla 주가 차트 (90일)
-[PDF] 이미지 추가 성공: [그림] 배터리 공급사 차트
-[PDF] 이미지 추가 성공: [그림] HVAC 공급사 차트
-[PDF] 이미지 추가 성공: [그림] Rivian 주가 차트 (90일)
-[PDF] 이미지 추가 성공: [그림] 배터리 공급사 차트
-[PDF] 이미지 추가 성공: [그림] HVAC 공급사 차트
-[PDF] 이미지 추가 성공: [그림] General Motors 주가 차트 (90일)
-[PDF] 이미지 추가 성공: [그림] 배터리 공급사 차트
-[PDF] 이미지 추가 성공: [그림] HVAC 공급사 차트
-[PDF] 이미지 추가 성공: [그림] Ford 주가 차트 (90일)
-[PDF] 이미지 추가 성공: [그림] 배터리 공급사 차트
-[PDF] 이미지 추가 성공: [그림] HVAC 공급사 차트
-[PDF] 이미지 추가 성공: [그림] BYD 주가 차트 (90일)
-[PDF] 이미지 추가 성공: [그림] 배터리 공급사 차트
-[PDF] 이미지 추가 성공: [그림] HVAC 공급사 차트
-[PDF] ✓ 빌드 성공: C:\workspace\evagent\outputs\report_report_001.pdf
-[PDF] ✓ 렌더링 성공: C:\workspace\evagent\outputs\report_report_001.pdf
+[3/9] General Motors
 
-[SUCCESS] ✓ PDF Report Generated:
-  C:\workspace\evagent\outputs\report_report_001.pdf
+[Images] 수집:
+  - OEM 차트: 8개
+    • BYD
+    • Ford
+    • General Motors
+    • Li Auto
+    • Rivian
+    • Tesla
+    • Volkswagen
+    • XPeng
+[Prompt] General Motors (41103 chars)
+[LLM] 호출 중...
+[LLM] 완료 (3335 chars)
+[INFO] 회사 섹션: General Motors
+[HTML] ✓ report_report_001_General_Motors.html
+[PDF] ✓ playwright: report_report_001_General_Motors.pdf
+[PDF] ✓ playwright: report_report_001_General_Motors.pdf
+[PDF] ✓ playwright: report_report_001_Rivian.pdf
+[PDF] ✓ playwright: report_report_001_Tesla.pdf
+[IMG] batch converter unavailable (imgkit/wkhtmltoimage 미설치 가능)
 
-================================================================================
-PIPELINE COMPLETED SUCCESSFULLY
-================================================================================
+[4/9] Ford
 
-Output directory: C:\workspace\evagent\outputs
+[Images] 수집:
+  - OEM 차트: 8개
+    • BYD
+    • Ford
+    • General Motors
+    • Li Auto
+    • Rivian
+    • Tesla
+    • Volkswagen
+    • XPeng
+[Prompt] Ford (40771 chars)
+[LLM] 호출 중...
+[LLM] 완료 (4843 chars)
+[INFO] 회사 섹션: Ford
+[HTML] ✓ report_report_001_Ford.html
+[PDF] ✓ playwright: report_report_001_Ford.pdf
+[PDF] ✓ playwright: report_report_001_Ford.pdf
+[PDF] ✓ playwright: report_report_001_General_Motors.pdf
+[PDF] ✓ playwright: report_report_001_Rivian.pdf
+[PDF] ✓ playwright: report_report_001_Tesla.pdf
+[IMG] batch converter unavailable (imgkit/wkhtmltoimage 미설치 가능)
 
-Generated files:
-  ✓ supervisor_summary.json        - Supervisor execution summary
-  ✓ jit_analysis.json              - JIT supply chain analysis
-  ✓ jit_evaluation.json            - JIT evaluation scores
-  ✓ stock_analysis.json            - Stock market analysis
-  ✓ esg_analysis.json              - ESG policy analysis
-  ✓ map_oem_suppliers.png          - Global OEM/supplier map
+[5/9] BYD
 
-    ✓ tech_summary_bmw.json
-    ... and 4 more
+[Images] 수집:
+  - OEM 차트: 8개
+    • BYD
+    • Ford
+    • General Motors
+    • Li Auto
+    • Rivian
+    • Tesla
+    • Volkswagen
+    • XPeng
+[Prompt] BYD (41012 chars)
+[LLM] 호출 중...
+[LLM] 완료 (3490 chars)
+[INFO] 회사 섹션: BYD
+[HTML] ✓ report_report_001_BYD.html
+[PDF] ✓ playwright: report_report_001_BYD.pdf
+[PDF] ✓ playwright: report_report_001_BYD.pdf
+[PDF] ✓ playwright: report_report_001_Ford.pdf
+[PDF] ✓ playwright: report_report_001_General_Motors.pdf
+[PDF] ✓ playwright: report_report_001_Rivian.pdf
+[PDF] ✓ playwright: report_report_001_Tesla.pdf
+[IMG] batch converter unavailable (imgkit/wkhtmltoimage 미설치 가능)
 
-  Stock charts (30):
-    ✓ stock_Battery_merged_20251023_143116.png
-    ✓ stock_Battery_merged_20251023_144834.png
-    ✓ stock_Battery_merged_20251023_150250.png
-    ... and 27 more
+[6/9] Li Auto
 
-  PDF Report:
-    ✓ report_report_001.pdf
+[Images] 수집:
+  - OEM 차트: 8개
+    • BYD
+    • Ford
+    • General Motors
+    • Li Auto
+    • Rivian
+    • Tesla
+    • Volkswagen
+    • XPeng
+[Prompt] Li Auto (41257 chars)
+[LLM] 호출 중...
+[LLM] 완료 (4306 chars)
+[INFO] 회사 섹션: Li Auto
+[HTML] ✓ report_report_001_Li_Auto.html
+[PDF] ✓ playwright: report_report_001_Li_Auto.pdf
+[PDF] ✓ playwright: report_report_001_BYD.pdf
+[PDF] ✓ playwright: report_report_001_Ford.pdf
+[PDF] ✓ playwright: report_report_001_General_Motors.pdf
+[PDF] ✓ playwright: report_report_001_Li_Auto.pdf
+[PDF] ✓ playwright: report_report_001_Rivian.pdf
+[PDF] ✓ playwright: report_report_001_Tesla.pdf
+[IMG] batch converter unavailable (imgkit/wkhtmltoimage 미설치 가능)
+
+[7/9] XPeng
+
+[Images] 수집:
+  - OEM 차트: 8개
+    • BYD
+    • Ford
+    • General Motors
+    • Li Auto
+    • Rivian
+    • Tesla
+    • Volkswagen
+    • XPeng
+[Prompt] XPeng (40665 chars)
+[LLM] 호출 중...
+[LLM] 완료 (4394 chars)
+[INFO] 회사 섹션: XPeng
+[HTML] ✓ report_report_001_XPeng.html
+[PDF] ✓ playwright: report_report_001_XPeng.pdf
+[PDF] ✓ playwright: report_report_001_BYD.pdf
+[PDF] ✓ playwright: report_report_001_Ford.pdf
+[PDF] ✓ playwright: report_report_001_General_Motors.pdf
+[PDF] ✓ playwright: report_report_001_Li_Auto.pdf
+[PDF] ✓ playwright: report_report_001_Rivian.pdf
+[PDF] ✓ playwright: report_report_001_Tesla.pdf
+[PDF] ✓ playwright: report_report_001_XPeng.pdf
+[IMG] batch converter unavailable (imgkit/wkhtmltoimage 미설치 가능)
+
+[8/9] BMW
+
+[Images] 수집:
+  - OEM 차트: 8개
+    • BYD
+    • Ford
+    • General Motors
+    • Li Auto
+    • Rivian
+    • Tesla
+    • Volkswagen
+    • XPeng
+[Prompt] BMW (40624 chars)
+[LLM] 호출 중...
+[LLM] 완료 (3678 chars)
+[HTML] ✓ report_report_001_BMW.html
+[PDF] ✓ playwright: report_report_001_BMW.pdf
+[PDF] ✓ playwright: report_report_001_BMW.pdf
+[PDF] ✓ playwright: report_report_001_BYD.pdf
+[PDF] ✓ playwright: report_report_001_Ford.pdf
+[PDF] ✓ playwright: report_report_001_General_Motors.pdf
+[PDF] ✓ playwright: report_report_001_Li_Auto.pdf
+[PDF] ✓ playwright: report_report_001_Rivian.pdf
+[PDF] ✓ playwright: report_report_001_Tesla.pdf
+[PDF] ✓ playwright: report_report_001_XPeng.pdf
+[IMG] batch converter unavailable (imgkit/wkhtmltoimage 미설치 가능)
+
+[9/9] Volkswagen
+
+[Images] 수집:
+  - OEM 차트: 8개
+    • BYD
+    • Ford
+    • General Motors
+    • Li Auto
+    • Rivian
+    • Tesla
+    • Volkswagen
+    • XPeng
+[Prompt] Volkswagen (40876 chars)
+[LLM] 호출 중...
+[LLM] 완료 (3497 chars)
+[INFO] 회사 섹션: Volkswagen
+[HTML] ✓ report_report_001_Volkswagen.html
+[PDF] ✓ playwright: report_report_001_Volkswagen.pdf
+[PDF] ✓ playwright: report_report_001_BMW.pdf
+[PDF] ✓ playwright: report_report_001_BYD.pdf
+[PDF] ✓ playwright: report_report_001_Ford.pdf
+[PDF] ✓ playwright: report_report_001_General_Motors.pdf
+[PDF] ✓ playwright: report_report_001_Li_Auto.pdf
+[PDF] ✓ playwright: report_report_001_Rivian.pdf
+[PDF] ✓ playwright: report_report_001_Tesla.pdf
+[PDF] ✓ playwright: report_report_001_Volkswagen.pdf
+[PDF] ✓ playwright: report_report_001_XPeng.pdf
+[IMG] batch converter unavailable (imgkit/wkhtmltoimage 미설치 가능)
+
+============================================================
+보고서 생성 완료
+============================================================
+성공: 9개 / 실패: 0개
+
+생성된 보고서:
+  • Tesla: report_report_001_Tesla.pdf
+  • Rivian: report_report_001_Rivian.pdf
+  • General Motors: report_report_001_General_Motors.pdf
+  • Ford: report_report_001_Ford.pdf
+  • BYD: report_report_001_BYD.pdf
+  • Li Auto: report_report_001_Li_Auto.pdf
+  • XPeng: report_report_001_XPeng.pdf
+  • BMW: report_report_001_BMW.pdf
+  • Volkswagen: report_report_001_Volkswagen.pdf
+============================================================
 
 
