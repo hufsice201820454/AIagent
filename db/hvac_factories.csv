@@ -1,0 +1,85 @@
+factory_id,hvac_id,plant_name,city,state_province,country,latitude,longitude,notes
+690c7af2-5826-4389-865c-902e14883791,e9b11aef-fcd4-4182-b3dc-69fb772940b9,DENSO Manufacturing Michigan,Battle Creek,,Michigan,42.3192548,-85.1824269,DMMI
+9245a077-3d14-4da0-aef4-d9993d6f6d28,e9b11aef-fcd4-4182-b3dc-69fb772940b9,DENSO Manufacturing Tennessee,Maryville,,Tennessee,35.7564719,-83.9704593,DMTN
+0a5ff36d-3270-4388-92ad-868c7467aa26,64e289f5-48d7-45a7-8a40-50ceed254f31,Auto Parts Hungary Kft.,Rétság,,Hungary,47.9303241,19.1375901,Rétság
+e0f5c86c-ac11-465f-a71f-2f3a64b700d1,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Hungary Kft.,Székesfehérvár,,Hungary,47.1910169,18.410811,Székesfehérvár
+98ef678c-35a4-46b8-95ae-46f29368d947,64e289f5-48d7-45a7-8a40-50ceed254f31,Shorter Manufacturing Facility,Shorter,,Alabama,32.3948615,-85.916902,
+5dd43804-6312-4613-9cfc-c7a63a750edc,64e289f5-48d7-45a7-8a40-50ceed254f31,Gyeongju Manufacturing Site,Gyeongju,,South Korea,35.8556705,129.2248811,
+cadbeb89-8ebb-4d61-b9ea-faac4c1cce2d,9952b4f3-5615-4c30-80de-9335c562ce66,Valeo Thermal Systems Skawina,Skawina,,Poland,49.9747508,19.8265702,
+e25d04f7-549e-4398-b578-6af5c7155bb7,02ce762f-dd24-4304-bc45-5b0ffa589edc,Celaya Production Facility,Celaya,,Guanajuato,20.5222851,-100.8307739,
+ca380ab9-0efb-4724-aebc-b293b6f04865,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Lawrenceburg BTMS Manufacturing,Lawrenceburg,,Tennessee,35.2423023,-87.3347389,
+480f841a-083a-4954-b916-e31d19842d19,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Pontevico EVantage Manufacturing,Pontevico,,Brescia,45.274374,10.092471,
+eb04f5bd-d670-481e-820a-1983e158841d,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Franklin Facility,Franklin,,Wisconsin,42.888627,-88.0384183,new
+a03dca54-e490-4d4e-a0e0-c99afd7fd0a9,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Thermal Products – Auburn Hills,Auburn Hills,,Michigan,42.6875323,-83.2341028,
+64e388b8-2961-4df8-b390-e90a6e12005b,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Daejeon,Daejeon,,South Korea,36.3497007,127.3849016,
+98f09044-ab97-4d8d-880e-368f096ba885,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Pyeongtaek,Pyeongtaek,,South Korea,36.9924966,127.1127168,
+a92affd8-b81d-4781-bc01-ea531e90fb3c,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Pangyo,Seongnam,Pangyo,South Korea,37.4038076,127.1093709,
+cb2a7622-c1db-439d-ac75-ba288a8a09ba,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Gyeongju,Gyeongju,,South Korea,35.8556705,129.2248811,
+e2b44ee7-9329-4b21-827d-bc13969aa67a,64e289f5-48d7-45a7-8a40-50ceed254f31,FAWER Hanon Thermal Systems Co.,Ltd.,,Changchun,43.8844201,125.3180998,Changchun
+30a8b334-380d-433f-96ae-40bd6fb32eec,64e289f5-48d7-45a7-8a40-50ceed254f31,FAWER Hanon Automotive Components Co.,Ltd.,,Changchun,43.8844201,125.3180998,Changchun
+5f5471a4-aad7-4ac6-956b-97d88f72d2da,64e289f5-48d7-45a7-8a40-50ceed254f31,FAWER Hanon Thermal Systems Co.,Ltd.,,Chengdu,30.659867,104.063315,Chengdu
+78433b2a-e8fe-4762-9296-3ed4e7fe6c45,64e289f5-48d7-45a7-8a40-50ceed254f31,Chongqing Hanon Jianshe Automotive Thermal Systems Co.,Ltd.,,Chongqing,30.05518,107.8748712,
+263fef4b-e253-4727-a52c-e9d57e12f18b,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Co.,Ltd.,,Dalian,39.740278,122.255833,Dalian
+dbda3107-e67d-4d2b-8a54-8e4476c70586,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Co.,Ltd.,,Wuhan (Jiangxia),30.4899785,114.5259426,Hubei
+78ffed81-0660-42b7-a65a-72c6add76059,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Co.,Ltd.,,Nanchang,28.6472124,116.0348483,Nanchang
+e662412f-ef20-4ec8-9599-f14795683bc9,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Co.,Ltd.,,Shanghai (Xuhui),31.1450814,121.4195085,Shanghai
+3b308d7c-4d78-4163-b398-2bf28623cd76,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Co.,Ltd.,,Yancheng,33.349559,120.1577019,Yancheng
+3b6921d7-5728-4d6f-830d-b0344f4d3111,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Climate Systems India Pvt. Ltd.,Bhiwadi,,India,28.2039413,76.837441,
+062e70e1-addc-49a8-8b8f-fc2b9a3ae3db,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems South Africa Ltd.,Port Elizabeth,Gqeberha,South Africa,-33.9618359,25.6186512,PTY
+7584661f-3f7f-4627-94d2-5c5c2813c6f9,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Autopal s.r.o.,Hluk,,Czech Republic,48.988328,17.5268918,
+2670abec-2b23-40cf-a09e-c2688b8959f0,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Autopal s.r.o.,Nový Jičín,,Czech Republic,49.6008644,18.0157732,Nový Jičín
+7dc137e1-b62c-4b54-92ca-e96ffebc6c35,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Thermal Technology s.r.o.,Kladno,,Czech Republic,49.7724743,15.9822811,
+5ce7def6-7cbe-401a-84b0-7f6ee61c00a5,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Charleville SAS,Charleville-Mézières,,France,49.7735712,4.7206939,
+6a7860f1-c6b0-4ac7-8ff7-b11c907aa6a8,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Deutschland GmbH,Kerpen,,Germany,50.3097609,6.7293316,
+4dbcc102-ed65-43ce-9170-456ee0810744,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems EFP Deutschland GmbH,Bad Homburg,,Germany,50.2363508,8.5980265,
+cbb0d09f-1340-4783-aed0-baece8174014,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Auto Parts Hungary Kft.,Rétság,,Hungary,47.9147418,19.1159244,
+f8c57553-7156-47fd-b59e-114e585f9e44,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Hungary Kft.,Székesfehérvár,,Hungary,47.1910169,18.410811,Alba
+e5c2fbb4-69d2-4b3e-b3cb-176e762e9bef,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Hungary Kft.,Pécs,,Hungary,46.0765092,18.2280317,Pécs
+646db699-be85-4408-aeed-56bd743376e8,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Italia Benevento s.r.l.,Benevento,,Italy,41.2476307,14.7057054,
+5fea5a5c-a34b-4c46-9976-c6b27d93c471,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Italia Campiglione s.r.l.,Campiglione Fenile,,Italy,44.8045985,7.3223128,
+5011d1f7-2b8e-46be-83be-c430d043c5b8,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Netherlands Coöperatief U.A.,Heerlen,,Netherlands,50.8775239,5.9815066,
+69fc98a7-e65a-4aff-9c97-2578a4046057,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Portugal,S.A.,,Palmela,38.569601,-8.9011653,
+3ead27c5-f586-4115-9ccf-f888f319a935,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Automotive Climate Systems Mfg. Co.,Dilovası,Kocaeli,Türkiye,40.7891632,29.5332182,
+d8f3a8db-3cf6-4753-b5bc-00970924494a,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Hanon Systems UK Ltd.,Birmingham,,United Kingdom,52.4796992,-1.9026911,
+111c5684-b9e0-4fda-bcd0-47df1852c7ff,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Alabama Corp.,Shorter,,Alabama,32.3948615,-85.916902,
+9ecd8a27-6bab-4477-b4c1-2421053da77d,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Statesboro,Statesboro,,Georgia,32.4490141,-81.7832912,
+fa861052-189e-4855-bc7f-7303465a27c3,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems USA,LLC,Carey,Carey,40.9525551,-83.3824238,
+18b74180-dfe8-4252-8e4c-09737e340db4,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems USA,Novi,,Michigan,42.48059,-83.4754913,Novi
+2874dab2-149e-4e35-9f8c-be8844919c4e,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Loudon,Loudon,,Tennessee,35.7490023,-84.320293,
+c62a27bf-9bb4-4bb9-93c9-c051179fd243,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Canada Inc.,Belleville,,Ontario,44.2436328,-77.3607597,
+c99e0fb2-206e-40b6-941a-9d8e388ba5e0,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems EFP Canada Ltd.,Concord,,Ontario,43.8003622,-79.4993876,
+373f94b3-4690-4889-9d5d-f5e867271082,64e289f5-48d7-45a7-8a40-50ceed254f31,Hanon Systems Canada,Woodbridge,,Ontario,43.7848982,-79.5923855,Woodbridge
+05fc47b9-841e-44fd-9db7-44374f128e1f,64e289f5-48d7-45a7-8a40-50ceed254f31,Coclisa S.A. de C.V.,Ciudad Juárez,,Chihuahua,31.7372575,-106.485655,Juárez 1 FT
+aa54e887-3dfa-479f-943b-69aeec0d259b,64e289f5-48d7-45a7-8a40-50ceed254f31,Juárez 1 PTC/HEX,Ciudad Juárez,,Chihuahua,31.7372575,-106.485655,
+c72197de-94d4-4b42-8615-215c3337d9ea,64e289f5-48d7-45a7-8a40-50ceed254f31,Juárez 2,Ciudad Juárez,,Chihuahua,31.7405028,-106.4874685,
+2a8a3811-9835-4b1f-b4fc-b4c5f600381b,64e289f5-48d7-45a7-8a40-50ceed254f31,EFP Operations Mexicana,S.A. de C.V.,,Monterrey (Apodaca),25.7271828,-100.1916969,
+66cdf9b7-9395-4ddf-9e28-42875f691341,64e289f5-48d7-45a7-8a40-50ceed254f31,Querétaro Site,El Marqués,,Querétaro,20.7350778,-100.2835765,El Marqués
+7b6d673c-7879-4826-9ea5-c51cf2b5330b,e9b11aef-fcd4-4182-b3dc-69fb772940b9,DENSO Manufacturing Arkansas,Osceola,,Arkansas,35.7050778,-89.969532,
+7838f7b3-5cdb-47c5-8b5a-210a58191994,e9b11aef-fcd4-4182-b3dc-69fb772940b9,DENSO Manufacturing North Carolina,Statesville,,North Carolina,35.7826363,-80.8872959,
+b00b965e-46bd-4c62-8954-c8fa67d8a58a,e9b11aef-fcd4-4182-b3dc-69fb772940b9,DENSO Thermal Systems S.p.A.,Poirino,Turin,Italy,44.920845,7.846928,
+9e773416-fdff-4dbc-be57-79e35de5cfb1,e9b11aef-fcd4-4182-b3dc-69fb772940b9,DENSO Czech s.r.o.,Liberec,,Czech Republic,50.7702648,15.0583947,
+4d6821d2-de60-4bb1-88d5-cad835178259,e9b11aef-fcd4-4182-b3dc-69fb772940b9,DENSO Hungary Ltd.,Székesfehérvár,,Hungary,47.1910169,18.410811,
+c42ce41b-2ad5-480c-8e51-f209a74304e6,e9b11aef-fcd4-4182-b3dc-69fb772940b9,DENSO Poland Sp. z o.o.,Szczecin,,Poland,53.4301818,14.5509623,
+63494dc7-1d7e-4fc7-9239-7d275f4e56da,e9b11aef-fcd4-4182-b3dc-69fb772940b9,DENSO Thermal Systems,Shanghai,,China,31.2312707,121.4700152,Shanghai
+ce70c2a5-504b-4e0d-af5d-8ed314ac1e33,9952b4f3-5615-4c30-80de-9335c562ce66,Valeo Thermal Systems Czech,Žebrák,,Czech Republic,49.8757493,13.8966867,
+8068da71-7b89-4a3f-b6f5-f81fbd566280,9952b4f3-5615-4c30-80de-9335c562ce66,Valeo Climatisation Frankreich,La Verrière,,France,48.7555258,1.9554697,
+9bf7ffbc-892e-4fac-8bf6-a3c7ecef0429,9952b4f3-5615-4c30-80de-9335c562ce66,Valeo Thermal Systems Hungary,Veszprém,,Hungary,47.0933824,17.9080406,
+525990c8-8854-46c6-a37e-927a9f24610a,9952b4f3-5615-4c30-80de-9335c562ce66,Valeo Thermal Systems Mexico,San Luis Potosí,,Mexico,22.5000001,-100.4949145,
+92ce10df-fc0e-4ccb-af35-29cd6f90620e,a7c6b191-74db-4df2-875d-eda073e7cb77,Wuhu Manufacturing,Wuhu,,Anhui,31.1800568,118.2141777,
+28482226-2f21-41c4-afdf-fa8f1ac2224e,a7c6b191-74db-4df2-875d-eda073e7cb77,Odzaci Facility,Odžaci,,Serbia,45.5058662,19.2597368,
+e325f91c-f389-4f7d-b595-b56ff8d820d7,a7c6b191-74db-4df2-875d-eda073e7cb77,Prilep Facility,Prilep,,North Macedonia,41.3444984,21.5527115,
+85449564-92dc-496c-8075-e942a79514e8,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Farmington Hills Tech/Assembly,Farmington Hills,,Michigan,42.4853125,-83.3771553,
+c4d73c62-1856-4bcc-8de5-349e41d4b78b,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Lawrenceburg EV/BTMS,Lawrenceburg,,Tennessee,35.2423023,-87.3347389,
+72709541-a8cb-488a-9157-24044c081363,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Franklin Facility,Franklin,,Wisconsin,42.888627,-88.0384183,EVantage
+7e0be501-08f8-4c42-8ffe-b0a45e8f494e,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Pontevico EVantage,Pontevico,,Brescia,45.274374,10.092471,
+6ef11251-c625-44d9-990b-2c060b42352a,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Sosnowiec Thermal Systems,Sosnowiec,,Poland,50.2712401,19.2155628,
+ae1f1768-74b9-434f-b39e-1b3993ac6599,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Auburn Hills Thermal Products,Auburn Hills,,Michigan,42.6875323,-83.2341028,
+b5abdfe7-b759-41e4-8153-e1135ef0a87d,53d9013b-e822-4e22-b36b-dbfb5eeeb327,St. Clair Thermal Facility,St. Clair,,Michigan,42.9426715,-82.6283554,
+948c185f-18ba-43db-a270-337aeb837457,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Thermal Products - Neu-Ulm,Neu-Ulm,,Germany,48.3953489,10.0005211,
+7d5e7e87-857e-4ad8-b49c-348c0e02464e,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Thermal Management - Birmingham,Birmingham,,United Kingdom,52.4796992,-1.9026911,
+a7f61690-45e3-4fd2-8b18-31bf6e2c9a0e,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Queretaro Thermal Plant,Querétaro,,Mexico,20.8052225,-99.8837376,
+03d72215-3859-4d31-95f6-b31614d794a3,64e289f5-48d7-45a7-8a40-50ceed254f31,Juárez 2,Ciudad Juárez,,Chihuahua,31.6980541,-106.4494859,
+4d2ea5f8-fece-4d95-b151-c54d5abbf8b7,53d9013b-e822-4e22-b36b-dbfb5eeeb327,Sosnowiec Thermal Systems,Sosnowiec,,Poland,50.2780834,19.1342944,
+7bc857d3-3bbe-4d58-a0dd-179ff307b4c9,64e289f5-48d7-45a7-8a40-50ceed254f31,Juárez 2,Ciudad Juárez,,Chihuahua,31.705441,-106.4280584,
+094df038-a2ef-4deb-993f-af9f269202aa,64e289f5-48d7-45a7-8a40-50ceed254f31,EFP Operations Mexicana,S.A. de C.V.,,Monterrey (Apodaca),25.7272539,-100.1916875,
+587e11cb-7dc4-4a18-82a5-25a81bfadf1d,e9b11aef-fcd4-4182-b3dc-69fb772940b9,DENSO Poland Sp. z o.o.,Szczecin,,Poland,53.4298114,14.5928676,

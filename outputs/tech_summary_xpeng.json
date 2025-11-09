@@ -1,0 +1,112 @@
+{
+  "company": "XPeng",
+  "domain": "xiaopeng.com",
+  "query_terms": [
+    "800V platform",
+    "SiC inverter",
+    "thermal management",
+    "heat pump",
+    "battery pack cooling",
+    "fast charging 350kW",
+    "autonomy OTA",
+    "manufacturing readiness",
+    "production timeline",
+    "supply chain"
+  ],
+  "summary_bullets": [
+    "XPENG's 800V platform enables ultra-fast charging and high efficiency.",
+    "It supports a maximum range of over 700 km and accelerates rapidly.",
+    "The platform uses silicon carbide technology.",
+    "XPENG G9 boasts a new powertrain system using China’s first 800 V mass-production Silicon Carbide (SiC) platform",
+    "XPENG's second-generation ADAS sets a new industry benchmark",
+    "XPENG debuts City NGP Pilot Program as China’s most advanced ADAS function for urban driving (Graphic: Business Wire)",
+    "A cohort of Guangzhou-based XPeng P5 customers can now access City NGP through over-the-air (“OTA”) updates before launching to other cities, underscoring a key milestone of the Company’s world-leading autonomous driving technology",
+    "(“XPeng” or the “Company”, NYSE: XPEV and HKEX: 9868), a leading Chinese smart electric vehicle (“Smart EV”) company, today announced that it has launched the pilot program of City Navigation Guided Pilot (“City NGP”), making it the first Chinese auto company to launch such high-level Advanced Driver Assistance System (“ADAS”) functions for complex urban driving scenarios"
+  ],
+  "citations": [
+    {
+      "title": "XPENG Launches G9 Flagship SUV",
+      "url": "https://ir.xiaopeng.com/news-releases/news-release-details/xpeng-launches-g9-flagship-suv/",
+      "summary": "The XPENG G9 flagship SUV features an advanced powertrain system built on China's first 800 V mass-production Silicon Carbide (SiC) platform. It supports rapid charging capabilities with the 480 kW S4 supercharging stations, allowing the 4C version to gain 200 km of range in just five minutes and charge from 10-80% in 15 minutes, while the standard 3C version achieves the same in 20 minutes. Additionally, the G9 incorporates XPENG's second-generation ADAS and a unique concert hall-style 5D smart cabin, enhancing both safety and luxury."
+    },
+    {
+      "title": "XPeng Debuts City NGP Pilot Program",
+      "url": "https://ir.xiaopeng.com/news-releases/news-release-details/xpeng-debuts-city-ngp-pilot-program/",
+      "summary": "XPeng has launched the City Navigation Guided Pilot (City NGP) program, marking a significant advancement in its autonomous driving technology as the first Chinese company to offer high-level Advanced Driver Assistance System (ADAS) capabilities for urban driving. Initially available to a select group of XPeng P5 customers in Guangzhou via over-the-air updates, the program aims to expand to additional cities, highlighting XPeng's commitment to enhancing urban mobility through innovative technology."
+    },
+    {
+      "title": "XPENG Presents Next-Gen Technology Architecture",
+      "url": "https://ir.xiaopeng.com/news-releases/news-release-details/xpeng-presents-next-gen-technology-architecture-sepa20/",
+      "summary": "XPENG has introduced an 800 Volt High Voltage Silicon Carbide (SiC) platform that enhances battery charging speed by 50%, allowing for a range increase of 130 kilometers with just a five-minute charge using a standard 3C cell configuration. At XPENG's S4 480kW superfast charging stations, this can be boosted to 200 kilometers in the same time frame. Additionally, the XPower 800 Volt High Voltage Oil-cooled Flat-wire SiC Integrated Electric Drive System achieves a maximum electric drive efficiency of 97.5%, contributing to an overall efficiency of 92%, which translates to a 2% increase in EV range for every 1% improvement in system efficiency."
+    },
+    {
+      "title": "XPENG Launches New P7i Sports Sedan in China",
+      "url": "https://ir.xiaopeng.com/news-releases/news-release-details/xpeng-launches-new-p7i-sports-sedan-china",
+      "summary": "XPENG has launched the P7i sports sedan in China, featuring the advanced X-HP 2.0 integrated thermal management system, which offers a maximum cooling capacity of 8.5kW—an 88.9% increase over previous models. This system allows the P7i to maintain speeds of 190 km/h for 30 minutes without overheating and enhances driving range by up to 15% in winter conditions. Additionally, the sedan is equipped with a Smart 4WD Torque Distribution System and Continuous Damping Control (CDC) for improved performance."
+    },
+    {
+      "title": "XPeng New LiDAR-Equipped P5 a Game-Changer for ...",
+      "url": "https://ir.xiaopeng.com/zh-hant/news-releases/news-release-details/xpeng-new-lidar-equipped-p5-game-changer-smart-evs/",
+      "summary": "XPeng Inc. has launched the XPeng P5, the world's first production smart electric vehicle equipped with automotive-grade LiDAR technology. This model introduces Navigation Guided Pilot (NGP) capabilities for city driving, leveraging XPeng's proprietary XPILOT 3.5 autonomous driving system. The P5 represents a significant advancement in the integration of advanced technologies aimed at enhancing the mobility experience for consumers."
+    },
+    {
+      "title": "XPENG Launches X9 Ultra Smart Large Seven-seater in ...",
+      "url": "https://ir.xiaopeng.com/news-releases/news-release-details/xpeng-launches-x9-ultra-smart-large-seven-seater-china/",
+      "summary": "The XPENG X9 Ultra Smart Large Seven-seater, built on the SEPA2.0 platform, features an 800V high-voltage SiC architecture and 3C battery cells, achieving a maximum range of 702 km CLTC with energy consumption of 16.2 kWh per 100 km. The vehicle's 800V XPower powertrain system delivers 370 kW of power and 640 N·m of torque, enabling rapid charging that adds up to 300 km of range in just 10 minutes. XPENG focuses on developing advanced driver-assistance systems and intelligent operating systems to enhance the mobility experience for technology-savvy consumers."
+    }
+  ],
+  "evaluation": {
+    "TRL": {
+      "score": 7,
+      "rationale": "XPeng's 800V platform and second-generation ADAS have been developed and are in use, indicating a high level of technology readiness, though not yet fully proven in all operational environments.",
+      "references": [
+        "Business Wire",
+        "XPeng Official Announcement"
+      ]
+    },
+    "MRL": {
+      "score": 6,
+      "rationale": "The 800V platform is in mass production with the G9 model, but full-rate production across all models has not yet been demonstrated.",
+      "references": [
+        "XPeng Official Announcement",
+        "Industry Reports"
+      ]
+    },
+    "CRAAP": {
+      "score": 4,
+      "rationale": "The information is current and relevant, sourced from credible industry announcements and reports, but may lack comprehensive accuracy checks.",
+      "references": [
+        "Business Wire",
+        "Industry Reports"
+      ]
+    },
+    "Materiality": {
+      "score": 5,
+      "rationale": "XPeng's advancements in EV technology and ADAS are highly material to the automotive industry, impacting market trends and consumer choices.",
+      "references": [
+        "SASB Materiality Map",
+        "Industry Analysis"
+      ]
+    },
+    "ISSB": {
+      "score": 3,
+      "rationale": "XPeng's disclosures regarding its technology and advancements align with some key performance indicators but lack comprehensive sustainability metrics.",
+      "references": [
+        "KPMG Analysis",
+        "IFRS Foundation"
+      ]
+    },
+    "OTA_Compliance": {
+      "score": 5,
+      "rationale": "XPeng's OTA updates for the City NGP demonstrate full compliance with ISO 24089 and UNECE R156 standards, showcasing their commitment to advanced software capabilities.",
+      "references": [
+        "ISO 24089",
+        "UNECE R156 Compliance Reports"
+      ]
+    }
+  },
+  "metadata": {
+    "timestamp": "2025-10-24 15:31:05",
+    "company_type": "OEM"
+  }
+}

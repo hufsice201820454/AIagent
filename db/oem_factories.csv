@@ -1,0 +1,61 @@
+factory_id,oem_id,plant_name,city,state_province,country,latitude,longitude,notes
+6112c567-1d33-411f-b2d2-f5bc491b63de,1eabfbef-04e5-4852-9b7f-808c7e532a93,Debrecen Plant,Debrecen,,Hungary,47.5687614,21.5248064,
+76a4be9b-6e5c-44f5-ab5b-f6559d9f8f97,1eabfbef-04e5-4852-9b7f-808c7e532a93,Dingolfing Plant,Dingolfing,,Germany,48.6300801,12.4977434,iX/i5/i7
+93251864-c658-480b-904f-5f5307f547d1,1eabfbef-04e5-4852-9b7f-808c7e532a93,Leipzig Plant,Leipzig,,Germany,51.3406321,12.3747329,i models
+06ef6343-cc85-4589-9fa2-d634abd2c402,1eabfbef-04e5-4852-9b7f-808c7e532a93,Munich Plant,Munich,,Germany,48.1371079,11.5753822,i4
+c23f1f69-5e75-4460-b555-a862e4a6f707,1eabfbef-04e5-4852-9b7f-808c7e532a93,Regensburg Plant,Regensburg,,Germany,49.0195333,12.0974869,iX1
+0bb09a8a-190d-4d1f-bc4b-92613d184ee9,1eabfbef-04e5-4852-9b7f-808c7e532a93,Shenyang – Tiexi/Dadong,Shenyang,,China,41.8026095,123.4279105,BMW Brilliance
+7756f945-112c-47c6-843a-d7321e3e8b80,1eabfbef-04e5-4852-9b7f-808c7e532a93,Spartanburg Plant,Spartanburg,,USA,34.9498007,-81.9320157,BEV prep
+8d461f6e-74e1-42cc-98ab-e73b5465b889,97cc5789-76d5-4c09-854d-e9e6a7822f80,Camaçari Plant,Camaçari,Bahia,Brazil,-12.6605045,-38.3189402,
+eaebadc3-dbfb-4501-bf79-e6cd8ef6909e,97cc5789-76d5-4c09-854d-e9e6a7822f80,Changsha Plant,Changsha,,China,28.1988359,113.1073313,
+049ac039-5b92-4cfa-bd82-a7bf44a645ff,97cc5789-76d5-4c09-854d-e9e6a7822f80,Changzhou Plant,Changzhou,,China,31.9594385,119.9930016,
+ee82d078-7137-4c4f-a509-33c9074ef802,97cc5789-76d5-4c09-854d-e9e6a7822f80,Hefei Plant,Hefei,,China,31.8042709,117.508447,
+0fc3dd7a-e874-4377-8f9e-c75d3839aca8,97cc5789-76d5-4c09-854d-e9e6a7822f80,Jinan Plant,Jinan,,China,36.6519754,117.1138479,
+32321f80-d759-4ad4-99b2-377f813e8b58,97cc5789-76d5-4c09-854d-e9e6a7822f80,Rayong Plant,Rayong,,Thailand,12.7536829,101.1638165,
+5993ff10-8f95-4feb-9eae-6e59c993d3f0,97cc5789-76d5-4c09-854d-e9e6a7822f80,Pingshan Complex,Shenzhen,,China,22.5445741,114.0545429,
+81599794-367a-428a-aaf2-d76f18090d26,97cc5789-76d5-4c09-854d-e9e6a7822f80,Xi’an Plant,Xi'an,,China,36.6928981,109.676797,
+f391c71a-6462-42ae-b7e1-e1f652ccce2b,97cc5789-76d5-4c09-854d-e9e6a7822f80,Zhengzhou Plant,Zhengzhou,,China,34.7072067,113.7547922,
+2baa8035-678c-4943-bee7-db2187bb5495,2b81be29-7a6d-4682-bc34-331f79d54ca0,Kansas City Assembly,Claycomo,Kansas City,USA,39.1994028,-94.4792175,E‑Transit
+8d93b4de-0e5c-4805-9394-f9abe6df4c0c,2b81be29-7a6d-4682-bc34-331f79d54ca0,Cologne EV Center,Cologne,,Germany,50.938361,6.959974,
+cd25dbd2-87c7-4134-9a86-c256f0b711c1,2b81be29-7a6d-4682-bc34-331f79d54ca0,Cuautitlán Stamping & Assembly,Cuautitlán,,Mexico,19.7055182,-99.1666257,Mach‑E
+582a1b58-25ff-4e37-a61f-f057826c5c5f,2b81be29-7a6d-4682-bc34-331f79d54ca0,Rouge Electric Vehicle Center,Dearborn,,USA,42.3222599,-83.1763145,
+ed459d6b-1179-407d-8e76-9fc8db040d73,2b81be29-7a6d-4682-bc34-331f79d54ca0,Oakville Electric Vehicle Complex,Oakville,,Canada,43.447436,-79.666672,
+609e556c-7298-44a7-8b76-e7fc26973047,c2ab0fe6-a7bd-4c56-bbc1-816b615691ea,Factory ZERO,Detroit/Hamtramck,,USA,42.3815123,-83.0453415,Detroit‑Hamtramck
+e3691e72-13ed-419b-bd7d-bf20d54562c5,c2ab0fe6-a7bd-4c56-bbc1-816b615691ea,CAMI Assembly,Ingersoll,,Canada,43.037725,-80.88211,
+1a465b67-7c41-4b34-9b17-9e3782999a5d,c2ab0fe6-a7bd-4c56-bbc1-816b615691ea,Orion Assembly,Orion Township,,USA,42.7165388,-83.2594,
+09db7f01-30be-48b8-aa32-691d86387104,c2ab0fe6-a7bd-4c56-bbc1-816b615691ea,Ramos Arizpe Complex,Ramos Arizpe,,Mexico,25.9234599,-101.3128597,
+b3221041-98e9-4adc-b490-bf2d7b88abf2,c2ab0fe6-a7bd-4c56-bbc1-816b615691ea,Spring Hill Manufacturing,Spring Hill,,USA,35.7395111,-86.9627077,
+dabb0ec5-b958-4588-8dc6-dd8a9147e98b,bf4b377e-ca59-4c75-b0a8-c6503e36115f,Beijing Base,Beijing,Shunyi,China,40.0689102,116.5492814,Shunyi
+180648fd-3bd2-4404-b785-945e3dd735a7,97cc5789-76d5-4c09-854d-e9e6a7822f80,Changzhou Manufacturing Base,Changzhou,,China,31.8122623,119.9691539,
+7eb3c4e7-4f31-430f-be3f-e576b947df70,bf4b377e-ca59-4c75-b0a8-c6503e36115f,Normal Manufacturing Plant,Normal,,USA,40.5092961,-88.9843937,
+70b03f5a-d169-4be1-a25d-1bccce3769a7,a3044c0e-632c-4c1e-882b-15353a57cfe7,Gigafactory Texas,Austin,,USA,30.2226102,-97.6187555,
+314e978e-a953-4baa-8b7f-69fdaa337516,a3044c0e-632c-4c1e-882b-15353a57cfe7,Fremont Factory,Fremont,,USA,37.4935368,-121.9435609,
+b58af79c-7030-430d-8086-e8286d463d6b,a3044c0e-632c-4c1e-882b-15353a57cfe7,Gigafactory Berlin‑Brandenburg,Grünheide,,Germany,52.3972048,13.7948327,
+5d2e6b5f-6d96-4e3b-8517-dc0c4617790e,a3044c0e-632c-4c1e-882b-15353a57cfe7,Gigafactory Shanghai,Shanghai,,China,31.2312707,121.4700152,
+242d2ed2-b26a-4a92-b56d-86c6adf847e9,7672595f-1a93-4b6e-838d-6b9430d3c716,Chattanooga Assembly,Chattanooga,,USA,35.0457219,-85.3094883,ID.4
+6f8935d3-6e69-459f-8bc9-69a863c3970a,7672595f-1a93-4b6e-838d-6b9430d3c716,Dresden Transparent Factory (ID.3,paused/limited),,Dresden,51.0493286,13.7381437,
+66cd3f12-0cbc-4a8b-af7c-36917a136bf9,7672595f-1a93-4b6e-838d-6b9430d3c716,Emden Plant,Emden,,Germany,53.3670541,7.2058304,ID.7/ID.4
+2624121c-840b-4a71-92d2-9e486b5c230d,7672595f-1a93-4b6e-838d-6b9430d3c716,FAW‑VW Foshan,Foshan,,China,23.0239788,113.1159558,
+1625b233-5f7f-4a89-8c1c-b0e0de26ac32,97cc5789-76d5-4c09-854d-e9e6a7822f80,VW Anhui,Hefei,,China,31.8665676,117.281428,Hefei
+6d0ee0db-080a-4861-92ad-1a728e20dc82,7672595f-1a93-4b6e-838d-6b9430d3c716,SAIC‑VW Anting,Shanghai,Anting,China,31.2914909,121.1575028,
+60908e81-7650-4f85-8c56-3a64ca4a156e,7672595f-1a93-4b6e-838d-6b9430d3c716,Wolfsburg Plant,Wolfsburg,,Germany,52.4205588,10.7861682,ID.3 line
+0df4e552-57a3-4fc1-b5a2-041d97f005bf,7672595f-1a93-4b6e-838d-6b9430d3c716,Zwickau Vehicle Plant,Zwickau,,Germany,50.7185043,12.4939267,ID. family
+bd8e19b1-fe88-46d1-a1ee-c7996e934ed4,7672595f-1a93-4b6e-838d-6b9430d3c716,Guangzhou Plant,Guangzhou,Huangpu,China,23.3944452,113.489243,Huangpu
+d623ad96-7c98-4751-a5e3-f5582f885596,7672595f-1a93-4b6e-838d-6b9430d3c716,Wuhan Plant,Wuhan,,China,30.65186,114.5286282,
+a0ba2f8f-cf7b-4be8-8ef8-1f956fd39599,7672595f-1a93-4b6e-838d-6b9430d3c716,Zhaoqing Plant,Zhaoqing,Sihui,China,23.3287635,112.7175378,Sihui
+f3794e49-6ba6-4f74-ac63-ef14fd695ba9,1eabfbef-04e5-4852-9b7f-808c7e532a93,Debrecen Gigafactory,Debrecen,,Hungary,47.531399,21.6259782,
+02f84bd5-8231-4a44-87d3-acac41d94d76,a3044c0e-632c-4c1e-882b-15353a57cfe7,Gigafactory Nevada,Sparks,,Nevada,39.5404679,-119.7487235,with Tesla
+cabbf18f-55fb-4cb1-b697-fa9f030d7d31,c2ab0fe6-a7bd-4c56-bbc1-816b615691ea,Ultium Cells Tennessee,Spring Hill,,Tennessee,35.751179,-86.9300023,with GM
+b08dd985-9ccf-47f9-8556-465968621684,bf4b377e-ca59-4c75-b0a8-c6503e36115f,Hanon Systems Co.,Ltd.,,Beijing (Shunyi),40.0689102,116.5492814,Beijing
+7291441a-da51-4577-979b-48ae02e14996,bf4b377e-ca59-4c75-b0a8-c6503e36115f,Beijing BHAP Hanon Systems Co.,Ltd.,,Beijing (Daxing),39.7191662,116.3222953,
+a39840d8-8921-48c7-a9d9-b96c69f3101d,97cc5789-76d5-4c09-854d-e9e6a7822f80,Hanon Systems EFP Co.,Ltd.,,Changzhou,31.8122623,119.9691539,Changzhou
+2fad3e3a-6563-42f8-ae46-cafbd4fcb1d7,7672595f-1a93-4b6e-838d-6b9430d3c716,Foshan FAWER Hanon Thermal Systems Co.,Ltd.,,Foshan,23.0239788,113.1159558,
+ef1a9b89-2cc9-4356-931a-8c4387dd6163,97cc5789-76d5-4c09-854d-e9e6a7822f80,Hanon Systems Co. Ltd.,Rayong,,Thailand,12.6817905,101.277765,Thailand
+c792336b-cfaa-4c21-b69b-4ec658f1bcc4,7672595f-1a93-4b6e-838d-6b9430d3c716,DENSO Nansha,Guangzhou,Nansha,China,22.6356379,113.6782667,Guangzhou
+ba06e6e2-9f20-452f-8ae3-970e65f8664a,7672595f-1a93-4b6e-838d-6b9430d3c716,Valeo Thermal Systems China,Wuhan,,China,30.5951051,114.2999353,
+da10503c-ceb0-4b78-9656-210f01769c85,2b81be29-7a6d-4682-bc34-331f79d54ca0,Kansas City Assembly,Claycomo,Kansas City,USA,39.2020967,-94.4866969,E‑Transit
+de169166-0d6d-4e65-9092-dd841d2b3261,7672595f-1a93-4b6e-838d-6b9430d3c716,SAIC‑VW Anting,Shanghai,Anting,China,31.2923579,121.158569,
+523490a0-f3b9-4fc4-a54c-8ab325221e18,2b81be29-7a6d-4682-bc34-331f79d54ca0,Kansas City Assembly,Claycomo,Kansas City,USA,39.1992483,-94.4750857,E‑Transit
+7eed6ca3-cb66-4bce-ba03-69c079be2c52,bf4b377e-ca59-4c75-b0a8-c6503e36115f,Beijing Base,Beijing,Shunyi,China,40.0688967,116.549457,Shunyi
+ebbf9666-b450-4690-8e9a-ef66b29acf71,7672595f-1a93-4b6e-838d-6b9430d3c716,SAIC‑VW Anting,Shanghai,Anting,China,31.2991854,121.1592288,
+c28626e9-2107-49c1-81a9-52bb2fbe83a1,bf4b377e-ca59-4c75-b0a8-c6503e36115f,Hanon Systems Co.,Ltd.,,Beijing (Shunyi),40.0688967,116.549457,Beijing

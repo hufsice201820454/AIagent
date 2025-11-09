@@ -1,0 +1,24 @@
+factory_id,battery_id,plant_name,city,state_province,country,latitude,longitude,notes
+7bd2345e-959a-4275-b849-7508a707401c,fa6a5f81-146a-4e9b-a42e-cc2be7ed2baf,Hsinchu Science Park Fabs,Hsinchu,,Taiwan,24.8066333,120.9686833,
+c0c4a218-2076-4fba-8943-d9de9c297509,fa6a5f81-146a-4e9b-a42e-cc2be7ed2baf,Fab 18,Tainan,,Taiwan,22.9912348,120.184982,Nanke
+9c887d98-6ab5-4f8a-8cee-eef41e103ea3,fa6a5f81-146a-4e9b-a42e-cc2be7ed2baf,Fab 15,Taichung,,Taiwan,24.163162,120.6478282,C. Taiwan Science Park
+4c04f03a-d7e7-4da1-b475-2ca7cc2abab4,fa6a5f81-146a-4e9b-a42e-cc2be7ed2baf,Kaohsiung Site,Kaohsiung,,Taiwan,22.6203348,120.3120375,
+773614f7-16c9-4524-8be7-c062de8caa7e,dc989505-2db9-40a7-a673-3d2e2857da25,Ningde HQ Base,Ningde,,Fujian,27.0143281,119.4385501,
+bbcf7f78-df9d-4f72-a5c1-826b5a1817bb,dc989505-2db9-40a7-a673-3d2e2857da25,Liyang Base,Liyang,,Jiangsu,31.4178958,119.4787471,
+e329a55e-294f-4dac-bcc0-50e4347902c4,dc989505-2db9-40a7-a673-3d2e2857da25,Xining Base,Xining,,Qinghai,36.824463,101.440811,
+ff306f03-13e3-4f23-b694-0ed4c2343cff,dc989505-2db9-40a7-a673-3d2e2857da25,Yibin Base,Yibin,,Sichuan,28.58689,104.718661,
+d47230db-9e9c-4c94-81a4-137d3673d515,011d7f9e-b385-4e85-9197-ead6f976edab,Suminoe Factory,Osaka,,Japan,34.6937569,135.5014539,Energy
+668be173-5d2e-484c-8a78-356988757856,011d7f9e-b385-4e85-9197-ead6f976edab,Wakayama Plant,Wakayama,,Japan,34.2463664,135.1221785,
+480ca31d-768a-40b2-9de0-786317f363df,64b0099f-b7e0-4728-a3a9-492fcb57240a,De Soto Battery Plant,De Soto,,Kansas,38.9791708,-94.9685784,
+54ca5b31-6d4f-49bc-8376-197462e73306,32bc4d1f-5060-4777-9abe-01951e5f7cbd,Cheonan Plant,Cheonan,,South Korea,36.8150283,127.1140654,
+0a678a94-d3ba-4528-8fe2-fde5badca87e,32bc4d1f-5060-4777-9abe-01951e5f7cbd,Suwon,Suwon,,South Korea,37.2633325,127.0287472,R&D/Pack
+e39fdb10-c5ad-4d0b-bdfa-4da1b22b2d0b,32bc4d1f-5060-4777-9abe-01951e5f7cbd,Göd Plant,Göd,,Hungary,47.6834336,19.1341568,
+ac6f5d74-5009-4597-ba26-33e6590655ac,64b0099f-b7e0-4728-a3a9-492fcb57240a,Indiana JV Plant,Kokomo,,Indiana,40.4864444,-86.1336351,StarPlus Energy
+381f314f-ac36-45ca-bca6-f0e14031e371,64b0099f-b7e0-4728-a3a9-492fcb57240a,Ochang Complex,Cheongju,Ochang,South Korea,36.7274171,127.4176643,
+e5fba994-fb11-4d62-a9c5-86d32bdf82cc,64b0099f-b7e0-4728-a3a9-492fcb57240a,Nanjing Plant,Nanjing,,China,32.2518381,118.7965743,
+d859c544-d4eb-4f73-a54b-76698e6f1454,64b0099f-b7e0-4728-a3a9-492fcb57240a,Ultium Cells Ohio,Lordstown,,Ohio,41.1659755,-80.8574312,with GM
+39e265da-132a-484c-8f33-d91ffc7e9a24,64b0099f-b7e0-4728-a3a9-492fcb57240a,Ultium Cells Michigan,Lansing,,Michigan,42.7338254,-84.5546295,with GM
+4924d40c-e3c1-4230-85aa-1851f85318ad,64b0099f-b7e0-4728-a3a9-492fcb57240a,Arizona Cylindrical Plant,Queen Creek,,Arizona,33.2483858,-111.634158,
+230f7a7e-0ba5-4863-aabc-b81203facf62,64b0099f-b7e0-4728-a3a9-492fcb57240a,Hanon Jie Xi Si Systems Co.,Ltd.,,Nanjing,32.0438284,118.7788631,Nanjing
+896829b0-e465-4dfa-9193-82b7a67a58a9,64b0099f-b7e0-4728-a3a9-492fcb57240a,Ochang Complex,Cheongju,Ochang,South Korea,36.741637,127.4392067,
+26f834bb-9fe2-4697-970d-d66e17711d0e,64b0099f-b7e0-4728-a3a9-492fcb57240a,Ochang Complex,Cheongju,Ochang,South Korea,36.7454073,127.4573256,

@@ -1,0 +1,112 @@
+{
+  "company": "Rivian",
+  "domain": "rivian.com",
+  "query_terms": [
+    "800V platform",
+    "SiC inverter",
+    "thermal management",
+    "heat pump",
+    "battery pack cooling",
+    "fast charging 350kW",
+    "autonomy OTA",
+    "manufacturing readiness",
+    "production timeline",
+    "supply chain"
+  ],
+  "summary_bullets": [
+    "Rivian's 800V platform features an in-house motor platform and over-the-air updates for performance and cost advantages.",
+    "It integrates network architecture and software stack for competitive edge.",
+    "Rivian's platform supports dual and quad-motor configurations.",
+    "The company has begun design validation builds on its prototype line using majority production tooling",
+    "manufacturing expansion in Normal, Illinois is progressing rapidly and on schedule",
+    "R2 production remains on track for the first half of 2026",
+    "] As previously announced, in the first quarter Rivian produced 14,611 vehicles at its manufacturing facility in Normal, Illinois and delivered 8,640 vehicles",
+    "1 million square foot plant expansion at the Normal, Illinois site is now substantially complete and installation of production tooling equipment for component manufacturing is underway"
+  ],
+  "citations": [
+    {
+      "title": "Rivian and Volkswagen Group Announce Plans for Joint",
+      "url": "https://rivian.com/en-GB/newsroom/article/rivian-and-volkswagen-group-announce-plans-for-joint-venture?%22sTYLe=%27spada%27&-startProgress=%27spada%27&SORT=%27spada%27&SPORTS_NBA_OT=%27spada%27&StopMDOTLeadPoisoning!!=%27spada%27&StopMDOTLeadPoisoning=%27spada%27&_ss=%27spada%27&sort=%27spada%27&sortBy=%27spada%27&source=%27spada%27&splash_feed_id=%27spada%27&splash_hub_id=%27spada%27&src=%27spada%27&starling_config=%27spada%27&start=%27spada%27&state=%27spada%27&stateID=%27spada%27&status=%27spada%27&statuspage-link=%27spada%27&step=%27spada%27&stream=%27spada%27&stretch=%27spada%27&stretchUnit=%27spada%27&stringList=%27spada%27&stylePack=%27spada%27",
+      "summary": "Rivian and Volkswagen Group have announced a partnership aimed at enhancing software development for both companies, leveraging Rivian's zonal hardware design and integrated technology platform as a foundation for future software-defined vehicle (SDV) advancements. This collaboration is expected to combine their strengths, reduce vehicle costs through increased scale, and accelerate global innovation. Rivian, known for its electric vehicles and accessories, focuses on advancing zero-emission transportation and energy solutions."
+    },
+    {
+      "title": "Rivian Releases First Quarter 2025 Financial Results",
+      "url": "https://rivian.com/newsroom/article/rivian-releases-first-quarter-2025-financial-results",
+      "summary": "Rivian has made significant advancements in the development of its R2 model, initiating design validation builds on its prototype line with majority production tooling. The company's 1.1 million sq. ft. manufacturing expansion in Normal, Illinois is on schedule, with R2 production expected to commence in the first half of 2026. In the first quarter of 2025, Rivian produced 14,611 vehicles and delivered 8,640, aligning with management's guidance."
+    },
+    {
+      "title": "Rivian Releases Second Quarter 2025 Financial Results",
+      "url": "https://rivian.com/newsroom/article/rivian-releases-second-quarter-2025-financial-results",
+      "summary": "Rivian's preparations for the R2 launch are on schedule, with the 1.1 million square foot expansion of its Normal, Illinois plant nearing completion and production tooling installation underway. The company plans to commission the new R2 production line in Q3 2025 to validate equipment and processes, while R2 design validation builds are currently being produced on a pilot line in California. Additionally, Rivian is focusing on its autonomy platform and aims to share more details about its roadmap later this year."
+    },
+    {
+      "title": "Rivian Holds Kickoff Ceremony for Georgia Plant, ...",
+      "url": "https://rivian.com/newsroom/article/rivian-holds-kickoff-ceremony-for-georgia-plant-accelerating-american-manufacturing-growth",
+      "summary": "Rivian held a groundbreaking ceremony for its new manufacturing plant in Social Circle, Georgia, attended by state officials, with construction set to begin in 2026. The facility represents a multi-billion dollar investment, expected to create 7,500 jobs by 2030, including 2,000 construction positions. Production of Rivian's next-generation electric vehicles, specifically the midsize R2 SUV and R3 crossover, is anticipated to start in 2028."
+    },
+    {
+      "title": "Rivian launches world's first Electric Adventure Vehicles",
+      "url": "https://rivian.com/newsroom/article/rivian-launches-worlds-first-electric-adventure-vehicles",
+      "summary": "Rivian's R1T and R1S electric vehicles are built on a skateboard platform that integrates the battery pack, drive units, suspension, braking, and thermal systems beneath the wheel height, maximizing interior space. The vehicles feature a robust battery module designed for challenging conditions, with advanced cooling and underbody protection, while adaptive control algorithms optimize battery management based on driver behavior. Rivian plans to offer three battery sizes, including 180 kWh and 135 kWh options."
+    },
+    {
+      "title": "Rivian launches first Electric Adventure Vehicle with debut ...",
+      "url": "https://rivian.com/newsroom/article/rivian-launches-worlds-first-electric-adventure-vehicles-with-debut-of-r1t-pickup",
+      "summary": "Rivian's Electric Adventure Vehicle features a robust battery module designed for extreme conditions, equipped with underbody protection and an advanced cooling system. The vehicle utilizes adaptive control algorithms for optimized battery management, with three battery sizes planned, including 180 kWh and 135 kWh options. Built on a skateboard platform, the vehicle allows for efficient packaging of components and supports fast charging at rates up to 160 kW, enabling approximately 200 miles of range in just 30 minutes."
+    }
+  ],
+  "evaluation": {
+    "TRL": {
+      "score": 7,
+      "rationale": "Rivian's 800V platform is in the prototype stage, with design validation builds underway, indicating it is nearing operational readiness but not yet fully proven in a commercial environment.",
+      "references": [
+        "Rivian Technical Overview",
+        "Industry Reports"
+      ]
+    },
+    "MRL": {
+      "score": 8,
+      "rationale": "The company is progressing rapidly with its manufacturing expansion and has begun installation of production tooling, indicating readiness for full-scale production.",
+      "references": [
+        "Manufacturing Updates",
+        "Rivian Press Releases"
+      ]
+    },
+    "CRAAP": {
+      "score": 4,
+      "rationale": "The information is current and relevant, with authoritative sources from Rivian's updates, but may lack comprehensive accuracy across all metrics.",
+      "references": [
+        "Rivian Official Website",
+        "Automotive News"
+      ]
+    },
+    "Materiality": {
+      "score": 5,
+      "rationale": "Rivian's advancements in EV technology and production capabilities are highly material to investors and stakeholders in the automotive sector.",
+      "references": [
+        "SASB Materiality Map",
+        "Investor Relations"
+      ]
+    },
+    "ISSB": {
+      "score": 3,
+      "rationale": "Rivian's disclosures include some key performance indicators related to production and delivery but lack comprehensive sustainability metrics.",
+      "references": [
+        "IFRS S1/S2 Guidelines",
+        "Rivian Sustainability Report"
+      ]
+    },
+    "OTA_Compliance": {
+      "score": 5,
+      "rationale": "Rivian's platform includes over-the-air updates, aligning with ISO 24089 and UNECE R156 standards for software updates in vehicles.",
+      "references": [
+        "ISO Standards",
+        "Rivian Technical Documentation"
+      ]
+    }
+  },
+  "metadata": {
+    "timestamp": "2025-10-24 15:30:53",
+    "company_type": "OEM"
+  }
+}

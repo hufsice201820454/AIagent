@@ -1,0 +1,54 @@
+{
+  "companies": [
+    {
+      "company": "BMW",
+      "jit_score": 1,
+      "regional_score": 4
+    },
+    {
+      "company": "BYD",
+      "jit_score": 3,
+      "regional_score": 11
+    },
+    {
+      "company": "Ford",
+      "jit_score": 7,
+      "regional_score": 12
+    },
+    {
+      "company": "GM",
+      "jit_score": 12,
+      "regional_score": 18
+    },
+    {
+      "company": "Hyundai Motor Group",
+      "jit_score": 29,
+      "regional_score": 48
+    },
+    {
+      "company": "Li Auto",
+      "jit_score": 4,
+      "regional_score": 6
+    },
+    {
+      "company": "Rivian",
+      "jit_score": 0,
+      "regional_score": 0
+    },
+    {
+      "company": "Tesla",
+      "jit_score": 2,
+      "regional_score": 3
+    },
+    {
+      "company": "Volkswagen",
+      "jit_score": 3,
+      "regional_score": 11
+    },
+    {
+      "company": "XPeng",
+      "jit_score": 4,
+      "regional_score": 6
+    }
+  ]
+}

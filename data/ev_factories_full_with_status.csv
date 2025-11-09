@@ -1,0 +1,64 @@
+﻿Company,Plant,City,Country,Operational_Status
+BMW,Debrecen Plant,Debrecen,Hungary,Unknown
+BMW,Dingolfing Plant (iX/i5/i7),Dingolfing,Germany,Unknown
+BMW,Leipzig Plant (i models),Leipzig,Germany,Unknown
+BMW,Munich Plant (i4),Munich,Germany,Unknown
+BMW,Regensburg Plant (iX1),Regensburg,Germany,Unknown
+BMW,Shenyang – Tiexi/Dadong (BMW Brilliance),Shenyang,China,Unknown
+BMW,Spartanburg Plant (BEV prep),Spartanburg,USA,Under Re‑tooling / Planned
+BYD,Camaçari Plant,Camaçari (Bahia),Brazil,Unknown
+BYD,Changsha Plant,Changsha,China,Operational
+BYD,Changzhou Plant,Changzhou,China,Operational
+BYD,Hefei Plant,Hefei,China,Operational
+BYD,Jinan Plant,Jinan,China,Operational
+BYD,Rayong Plant,Rayong,Thailand,Operational
+BYD,Pingshan Complex,Shenzhen,China,Operational
+BYD,Hungary Plant (Szeged),Szeged,Hungary,Planned / Under Construction
+BYD,Xi’an Plant,Xi'an,China,Operational
+BYD,Zhengzhou Plant,Zhengzhou,China,Operational
+Ford,Kansas City Assembly (E‑Transit),Claycomo (Kansas City),USA,Operational
+Ford,Cologne EV Center,Cologne,Germany,Unknown
+Ford,Cuautitlán Stamping & Assembly (Mach‑E),Cuautitlán,Mexico,Unknown
+Ford,Rouge Electric Vehicle Center,Dearborn,USA,Unknown
+Ford,Oakville Electric Vehicle Complex,Oakville,Canada,Under Re‑tooling
+GM,Factory ZERO (Detroit‑Hamtramck),Detroit/Hamtramck,USA,Operational
+GM,CAMI Assembly,Ingersoll,Canada,Unknown
+GM,Orion Assembly,Orion Township,USA,Unknown
+GM,Ramos Arizpe Complex,Ramos Arizpe,Mexico,Unknown
+GM,Spring Hill Manufacturing,Spring Hill,USA,Operational
+Hyundai Motor Group,Kia India Plant (Anantapur),Anantapur (Andhra Pradesh),India,Unknown
+Hyundai Motor Group,Asan Plant (Ioniq 6 production line),Asan,South Korea,Unknown
+Hyundai Motor Group,Hyundai Indonesia Plant (Cikarang),Bekasi (Cikarang),Indonesia,Unknown
+Hyundai Motor Group,Gwangju Global Motors (Joint EV assembly),Gwangju,South Korea,Unknown
+Hyundai Motor Group,Kia Autoland Gwangju (EV5),Gwangju,South Korea,Unknown
+Hyundai Motor Group,Kia Autoland Gwangmyeong (EV6),Gwangmyeong,South Korea,Unknown
+Hyundai Motor Group,Kia Autoland Hwaseong (EV9 etc.),Hwaseong,South Korea,Unknown
+Hyundai Motor Group,Jeonju Plant (E-truck & Bus),Jeonju,South Korea,Unknown
+Hyundai Motor Group,Kia Mexico Plant (EV transition),Monterrey (Nuevo León),Mexico,Unknown
+Hyundai Motor Group,Hyundai Motor Alabama (HMA),Montgomery (AL),USA,Unknown
+Hyundai Motor Group,Hyundai Czech Plant (Nošovice),Nošovice,Czech Republic,Unknown
+Hyundai Motor Group,Hyundai Brazil Plant (Piracicaba),Piracicaba,Brazil,Unknown
+Hyundai Motor Group,"Metaplant America (HMGMA, under construction)",Savannah (GA),USA,Unknown
+Hyundai Motor Group,HMGICS (Innovation Center Singapore),Singapore,Singapore,Unknown
+Hyundai Motor Group,Hyundai Mobis EV Module Plant,Ulsan,South Korea,Unknown
+Hyundai Motor Group,Ulsan Plant (EV Line & Ioniq Series),Ulsan,South Korea,Unknown
+Hyundai Motor Group,Hyundai Turkey Plant (Assan Otomotiv),İzmit,Turkey,Unknown
+Hyundai Motor Group,Kia Slovakia Plant (Zilina),Žilina,Slovakia,Unknown
+Li Auto,Beijing (Shunyi) Base,Beijing (Shunyi),China,Unknown
+Li Auto,Changzhou Manufacturing Base,Changzhou,China,Operational
+Rivian,Normal Manufacturing Plant,Normal,USA,Operational
+Tesla,Gigafactory Texas,Austin,USA,Operational
+Tesla,Fremont Factory,Fremont,USA,Operational
+Tesla,Gigafactory Berlin‑Brandenburg,Grünheide,Germany,Operational
+Tesla,Gigafactory Shanghai,Shanghai,China,Unknown
+Volkswagen,Chattanooga Assembly (ID.4),Chattanooga,USA,Operational
+Volkswagen,"Dresden Transparent Factory (ID.3, paused/limited)",Dresden,Germany,Unknown
+Volkswagen,Emden Plant (ID.7/ID.4),Emden,Germany,Operational
+Volkswagen,FAW‑VW Foshan,Foshan,China,Unknown
+Volkswagen,VW Anhui (Hefei),Hefei,China,Operational
+Volkswagen,SAIC‑VW Anting,Shanghai (Anting),China,Unknown
+Volkswagen,Wolfsburg Plant (ID.3 line),Wolfsburg,Germany,Operational
+Volkswagen,Zwickau Vehicle Plant (ID. family),Zwickau,Germany,Operational
+XPeng,Guangzhou (Huangpu) Plant,Guangzhou (Huangpu),China,Operational
+XPeng,Wuhan Plant,Wuhan,China,Under Construction
+XPeng,Zhaoqing (Sihui) Plant,Zhaoqing (Sihui),China,Operational

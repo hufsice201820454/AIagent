@@ -1,0 +1,17 @@
+{
+  "final_status": 1,
+  "validation_status": {
+    "tech": true,
+    "valuechain": true,
+    "stock": true,
+    "esg": true
+  },
+  "retry_count": {},
+  "error_log": {},
+  "agent_results": {
+    "tech": true,
+    "valuechain": true,
+    "stock": true,
+    "esg": true
+  }
+}

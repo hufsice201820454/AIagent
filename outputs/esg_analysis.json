@@ -1,0 +1,167 @@
+{
+  "analysis_type": "ESG Summary (OEM only)",
+  "regions": [
+    "KR",
+    "CN",
+    "JP",
+    "EU",
+    "US"
+  ],
+  "government_policies": {
+    "KR": {
+      "policy": "South Korea aims to achieve net zero carbon emissions by 2050. The government has set interim targets for 2030 and 2045. Current policies are deemed insufficient for meeting this goal.",
+      "carbon_neutral": 2030
+    },
+    "CN": {
+      "policy": "China's official target is to achieve carbon neutrality by 2060. The target was reaffirmed in 2021. The goal is part of the 14th Five-Year Plan.",
+      "carbon_neutral": 2060
+    },
+    "JP": {
+      "policy": "Japan's official government target is to achieve net zero carbon emissions by 2050. This target was legally established in 2021. The government is actively working towards this goal.",
+      "carbon_neutral": 2050
+    },
+    "EU": {
+      "policy": "The European Union has set a net zero carbon target for 2050. The European Green Deal outlines this policy. The EU aims to become the first climate-neutral continent.",
+      "carbon_neutral": 2050
+    },
+    "US": {
+      "policy": "The United States government aims to achieve net-zero emissions by 2050. This target was set by President Joe Biden in 2021.",
+      "carbon_neutral": 2050
+    }
+  },
+  "corporate_esg_goals": {
+    "Tesla": {
+      "target_year": 2050,
+      "scope": [
+        "S1"
+      ],
+      "policy": "Tesla aims for net-zero GHG emissions by 2050, reports Scope 1, 2, and 3 emissions, and has reduced Scope 1 and 2 emissions by 41%."
+    },
+    "Rivian": {
+      "target_year": 2040,
+      "scope": [
+        "S1"
+      ],
+      "policy": "Rivian aims for net-zero emissions by 2040, with 100% renewable energy for charging networks since 2022. Scope 1, 2, and 3 emissions are tracked separately. Rivian's 2023 emissions data shows progress towards sustainability goals."
+    },
+    "General Motors": {
+      "target_year": 2025,
+      "scope": [
+        "S1",
+        "S3"
+      ],
+      "policy": "General Motors aims for net zero by 2040, targeting 72% reduction in Scope 1 and 2 emissions by 2035, and 51% in Scope 3 emissions by 2035. Renewable electricity targets are 2025 for U.S. and 2035 globally."
+    },
+    "Ford": {
+      "target_year": 2035,
+      "scope": [
+        "S1",
+        "S3"
+      ],
+      "policy": "Ford aims for net zero emissions by 2050, targeting 76% reduction in Scope 1 and 2 emissions by 2035 and 50% in Scope 3 emissions by 2035. Ford has reduced Scope 1, 2, and 3 emissions by 35.4% since 2017."
+    },
+    "BYD": {
+      "target_year": 2030,
+      "scope": [
+        "S1",
+        "S3"
+      ],
+      "policy": "BYD aims for net zero by 2045, targeting 50% reduction in operational carbon emissions by 2030. Scope 1 and 2 emissions data is incomplete for 2022. Scope 3 emissions are not reported."
+    },
+    "Li Auto": {
+      "target_year": 2030,
+      "scope": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "policy": "Li Auto aims for net-zero emissions by 2030, targeting Scope 1 and Scope 2 reductions by 90% and Scope 3 by 97% from 2019 baseline. Scope 1 and 2 cover emissions under direct control, while Scope 3 includes indirect emissions. Li Auto's 2023 ESG report outlines its governance and sustainability efforts."
+    },
+    "XPeng": {
+      "target_year": 2024,
+      "scope": [
+        "S1"
+      ],
+      "policy": "XPeng aims for net zero emissions by 2035. Scope 1, 2, and 3 emissions are part of its sustainability goals. XPeng's 2024 ESG report highlights its progress."
+    },
+    "BMW": {
+      "target_year": 2030,
+      "scope": [
+        "S1",
+        "S3"
+      ],
+      "policy": "BMW targets net-zero emissions by 2050, reducing Scope 1 and 2 by 80% by 2030, and Scope 3 by 22% and 50% by 2030. The company aims to have 50% of its sales from electric vehicles by 2030. BMW Group's emissions targets are science-based."
+    },
+    "Volkswagen": {
+      "target_year": 2030,
+      "scope": [
+        "S1"
+      ],
+      "policy": "Volkswagen aims for net zero by 2050, targets 30% CO2 reduction by 2030 (Scope 1, 2, 3), and reports emissions data for Scopes 1, 2, and 3."
+    }
+  },
+  "external_ratings": {
+    "Tesla": {
+      "msci": "a",
+      "cdp": "a"
+    },
+    "Rivian": {
+      "msci": "a",
+      "cdp": "a"
+    },
+    "General Motors": {
+      "msci": null,
+      "cdp": null
+    },
+    "Ford": {
+      "msci": null,
+      "cdp": null
+    },
+    "BYD": {
+      "msci": null,
+      "cdp": null
+    },
+    "Li Auto": {
+      "msci": null,
+      "cdp": null
+    },
+    "XPeng": {
+      "msci": null,
+      "cdp": null
+    },
+    "BMW": {
+      "msci": null,
+      "cdp": null
+    },
+    "Volkswagen": {
+      "msci": null,
+      "cdp": null
+    }
+  },
+  "notes": {
+    "ghg_protocol_scopes": {
+      "scope_1": "Direct emissions from owned/controlled sources (e.g., company vehicles, on-site fuel combustion).",
+      "scope_2": "Indirect emissions from purchased electricity, steam, heat, or cooling.",
+      "scope_3": "All other indirect emissions across the value chain (upstream & downstream - suppliers, transportation, product use, etc.)."
+    },
+    "msci_esg_rating": {
+      "scale": "AAA to CCC",
+      "AAA_AA": "Leader - Strong management of financially relevant ESG risks relative to industry peers.",
+      "A_BBB_BB": "Average - Mixed or average track record of managing ESG risks and opportunities.",
+      "B_CCC": "Laggard - High exposure and failure to manage significant ESG risks.",
+      "description": "Evaluates company resilience to industry-specific sustainability risks. Based on exposure to 35 key ESG issues and management effectiveness. Industry-relative scoring (0-10 scale mapped to letter grades)."
+    },
+    "cdp_score": {
+      "scale": "A to F",
+      "A": "Leadership - Environmental leadership with best practices - climate transition plans, supply chain risk management, TCFD/SBTi alignment.",
+      "B": "Management - Demonstrates coordinated actions and strategies to manage environmental impacts.",
+      "C": "Awareness - Acknowledges environmental issues but taking limited action.",
+      "D": "Disclosure - Transparent about environmental impact but minimal evidence of action.",
+      "F": "Failure - Failed to provide sufficient information or did not respond to CDP request.",
+      "description": "Assesses transparency and action on climate change, water security, and forests. Companies progress through four stages: Disclosure ??Awareness ??Management ??Leadership. Scored separately for Climate, Water, and Forests themes."
+    }
+  },
+  "references": {
+    "ghg_protocol": "https://ghgprotocol.org/corporate-standard"
+  }
+}
